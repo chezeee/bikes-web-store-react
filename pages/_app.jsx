@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }) {
       <main>
         <Component {...pageProps} />
       </main>
-      <footer></footer>
+      <footer>FOOTER</footer>
     </>
   );
 }

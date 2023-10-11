@@ -4,6 +4,7 @@ body {
   margin: 0;
   background: #f8fcf7;
   overflow-y: scroll;
+  text-align: center;
 }
 
 body table, body fieldset {
