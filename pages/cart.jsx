@@ -1,19 +1,15 @@
 import Head from 'next/head';
-import Catalog from '../components/Catalog';
-import Nav from '../components/Nav';
+import Cart from '../components/Cart';
 
 export default function ItemsCatalog({}) {
   return (
     <>
       <Head>
-        <title>BikeShop: Каталог</title>
+        <title>BikeShop: Корзина</title>
       </Head>
-      <header>
-        <Nav />
-      </header>
       <main>
         <section className="mainContainer">
-          <Catalog />
+          <Cart />
         </section>
       </main>
     </>
