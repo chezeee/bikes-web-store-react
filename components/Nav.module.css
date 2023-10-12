@@ -1,8 +1,11 @@
 .flex-wrap {
   display: flex;
   justify-content: space-evenly;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .flex-wrap li {
   list-style-type: none;
+  text-wrap: nowrap;
 }

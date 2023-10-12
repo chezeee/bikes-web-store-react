@@ -11,7 +11,7 @@ const pages = [
 
 export default function Nav() {
   return (
-    <nav className={css['header-nav']}>
+    <nav className={css['header-nav mainContainer']}>
       <ul className={css['flex-wrap']}>
         {pages.map(({ href, name }) => {
           return (
