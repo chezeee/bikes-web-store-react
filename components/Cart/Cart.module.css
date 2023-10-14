@@ -1,0 +1,13 @@
+.itemCards{
+  width: 100%;
+  text-align: center;
+}
+
+.itemCards ol {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.itemCards ol li {
+  margin-bottom: 1em;
+}

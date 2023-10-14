@@ -1,6 +1,7 @@
 import ProductCard from './ProductCard';
+import css from './Catalog.module.css';
 
-export default function Catalog({}) {
+export default function Catalog({ func }) {
   const items = [
     { id: '1', brand: 'Outleap', model: 'GRACE EXPERT' },
     { id: '2', brand: 'Jamis', model: 'HELIX A2' },
@@ -10,8 +11,9 @@ export default function Catalog({}) {
     { id: '6', brand: 'Mongoose', model: 'SWITCHBACK SPORT' },
     { id: '7', brand: 'Norco', model: 'OPTIC C2' },
   ];
+
   return (
-    <div>
+    <div className={css['products-container']}>
       {items.map((item) => {
         return <ProductCard key={item.id} item={item} />;
       })}

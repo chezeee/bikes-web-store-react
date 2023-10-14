@@ -1,4 +1,5 @@
 .flex-wrap {
+  margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   gap: 10px;
