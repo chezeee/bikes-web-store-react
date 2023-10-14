@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Cart from '../components/Cart/Cart';
 
+
 export default function ItemsCatalog({}) {
   return (
     <>

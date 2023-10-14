@@ -12,20 +12,21 @@ body {
   text-align: center;
 }
 
-body table, body fieldset {
-  margin: 0;
-}
-
-.pageWrap-flex{
-  min-height: 100%;
+.flexWrap {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+body table, body fieldset {
+  margin: 0;
+}
+
 .mainContainer {
   max-width: 1200px;
   margin: 50px auto ;
+  flex-grow: 1;
 }
 
 footer {

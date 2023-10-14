@@ -1,11 +1,10 @@
 import { OrdersProvider } from '../context/orders';
-import Image from 'next/image';
 import '../styles/globals.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      <div className="pageWrap-flex">
+      <div className="flexWrap">
         <main>
           <OrdersProvider>
             <Component {...pageProps} />

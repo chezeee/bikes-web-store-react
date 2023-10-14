@@ -6,7 +6,7 @@ const pages = [
   { href: '/catalog', name: 'Каталог товаров' },
   { href: '/sales', name: 'Акции и скидки' },
   { href: '/contacts', name: 'Контакты' },
-  { href: '/cart', name: '🛒'}
+  { href: '/cart', name: '🛒' },
 ];
 
 export default function Nav() {
@@ -16,7 +16,9 @@ export default function Nav() {
         {pages.map(({ href, name }) => {
           return (
             <li key={href}>
-              <Link href={href}>{name}</Link>
+              <Link className={css['navLink']} href={href}>
+                {name}
+              </Link>
             </li>
           );
         })}

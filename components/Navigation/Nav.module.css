@@ -10,3 +10,10 @@
   list-style-type: none;
   text-wrap: nowrap;
 }
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+
