@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import css from './CartItem.module.css';
+import Count from '../Count/Count';
 
 export default function CartItem({ item, deleteItem }) {
   const { id, brand, model } = item;
@@ -20,6 +21,7 @@ export default function CartItem({ item, deleteItem }) {
           <h3>{`${brand} ${model}`}</h3>
           <div>Бренд: {brand}</div>
         </div>
+        <Count />
         <button className={css['delete-button']} onClick={() => deleteItem(id)}>
           ❌
         </button>

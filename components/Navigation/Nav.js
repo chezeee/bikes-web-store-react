@@ -6,7 +6,7 @@ const pages = [
   { href: '/catalog', name: 'Каталог товаров' },
   { href: '/sales', name: 'Акции и скидки' },
   { href: '/contacts', name: 'Контакты' },
-  { href: '/cart', name: '🛒' },
+  { href: '/cart', name: '🛒Корзина' },
 ];
 
 export default function Nav() {

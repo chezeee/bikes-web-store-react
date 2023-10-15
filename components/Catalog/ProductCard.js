@@ -6,9 +6,17 @@ export default function ProductCard({ item }) {
   const { id, brand, model } = item,
     [orders, setOrders] = useOrdersContext(),
     addToCart = () => {
-      setOrders((old) => {
-        return old.concat(item);
+      let isInArray = false;
+      orders.forEach((el) => {
+        if (el.id === item.id) {
+          isInArray = true;
+        }
       });
+      if (!isInArray) {
+        setOrders((old) => {
+          return old.concat(item);
+        });
+      }
     };
   return (
     <>
