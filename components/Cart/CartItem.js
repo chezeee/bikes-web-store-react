@@ -3,7 +3,7 @@ import css from './CartItem.module.css';
 import Count from '../Count/Count';
 
 export default function CartItem({ item, deleteItem }) {
-  const { id, brand, model } = item;
+  const { id, brand, model, count } = item;
   return (
     <div className={css['cartItem']}>
       <div className={css['card-flexWrap']}>
@@ -21,7 +21,7 @@ export default function CartItem({ item, deleteItem }) {
           <h3>{`${brand} ${model}`}</h3>
           <div>Бренд: {brand}</div>
         </div>
-        <Count />
+        <Count count={count}/>
         <button className={css['delete-button']} onClick={() => deleteItem(id)}>
           ❌
         </button>

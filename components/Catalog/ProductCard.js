@@ -7,16 +7,23 @@ export default function ProductCard({ item }) {
     [orders, setOrders] = useOrdersContext(),
     addToCart = () => {
       let isInArray = false;
-      orders.forEach((el) => {
+      orders.map((el) => {
         if (el.id === item.id) {
+          setOrders((old) => {
+            let index = old.findIndex((el) => el.id === item.id);
+            old[index].count = 1 + +old[index].count;
+            return old;
+          });
           isInArray = true;
         }
       });
       if (!isInArray) {
         setOrders((old) => {
-          return old.concat(item);
+          old.push(item);
+          return old;
         });
       }
+      console.log('set to cart', orders);
     };
   return (
     <>

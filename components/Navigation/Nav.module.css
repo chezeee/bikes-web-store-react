@@ -1,4 +1,4 @@
-.flex-wrap {
+.flex_wrapper {
   margin-top: 30px;
   display: flex;
   align-items: center;
@@ -7,7 +7,7 @@
   flex-wrap: wrap;
 }
 
-.flex-wrap li {
+.flex_wrapper li {
   list-style-type: none;
   text-wrap: nowrap;
 }
@@ -18,3 +18,20 @@
   font-size: 1.2em;
 }
 
+.cart_wrapper {
+  position: relative;
+}
+
+.countInCart {
+  font-size: 14px;
+  line-height: 1.3em;
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: -14px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(84, 112, 255);
+  color: white;
+  border-radius: 50%;
+}

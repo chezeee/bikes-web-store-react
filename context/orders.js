@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 
+export const ordersCount = 0;
 const Context = createContext();
 
 export function OrdersProvider({ children }) {

@@ -1,16 +1,17 @@
 import css from './Count.module.css';
 import Image from 'next/image';
 
-export default function Count() {
+export default function Count({ count }) {
   return (
     <div className={css['count']}>
       <div className={css['count-input_wrapper']}>
         <input
           type="number"
+          onChange={() => {}}
           className={css['count-input']}
           min="1"
           max="100"
-          value="1"
+          value={count}
         />
       </div>
       <div className={css['count-controls_wrapper']}>

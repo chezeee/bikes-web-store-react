@@ -1,18 +1,27 @@
 import Link from 'next/link';
+import { useState, memo } from 'react';
 import css from './Nav.module.css';
+import { useOrdersContext } from '../../context/orders';
 
 const pages = [
   { href: '/', name: 'Главная' },
   { href: '/catalog', name: 'Каталог товаров' },
   { href: '/sales', name: 'Акции и скидки' },
   { href: '/contacts', name: 'Контакты' },
-  { href: '/cart', name: '🛒Корзина' },
 ];
 
-export default function Nav() {
+export default memo(function Nav({}) {
+  const [orders, setOrders] = useOrdersContext();
+  let counter = 0;
+
+  // подсчет товаров, помещенных в корзину для отображения рядом с иконкой корзины
+  orders.map((item) => {
+    counter = counter + +item.count;
+  });
+
   return (
     <nav className={css['header-nav mainContainer']}>
-      <ul className={css['flex-wrap']}>
+      <ul className={css['flex_wrapper']}>
         {pages.map(({ href, name }) => {
           return (
             <li key={href}>
@@ -22,10 +31,16 @@ export default function Nav() {
             </li>
           );
         })}
+        <li className={css.cart_wrapper}>
+          <div className={css.countInCart}>{counter}</div>
+          <Link className={css.navLink} href={'/cart'}>
+            {'🛒Корзина'}
+          </Link>
+        </li>
         <li>
           <button>Sign in</button>
         </li>
       </ul>
     </nav>
   );
-}
+});
