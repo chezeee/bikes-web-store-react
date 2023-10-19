@@ -34,7 +34,7 @@ export default memo(function Nav({}) {
         <li className={css.cart_wrapper}>
           <div className={css.countInCart}>{counter}</div>
           <Link className={css.navLink} href={'/cart'}>
-            {'🛒Корзина'}
+            {`🛒Корзина`}
           </Link>
         </li>
         <li>
