@@ -1,7 +1,7 @@
 import css from './Count.module.css';
 import Image from 'next/image';
 
-export default function Count({ count }) {
+export default function Count({ id, count, increaseCount, dicreaseCount }) {
   return (
     <div className={css['count']}>
       <div className={css['count-input_wrapper']}>
@@ -15,7 +15,7 @@ export default function Count({ count }) {
         />
       </div>
       <div className={css['count-controls_wrapper']}>
-        <button>
+        <button onClick={() => increaseCount(id)}>
           <Image
             src={`/icons/count_up.svg`}
             width={12}
@@ -25,7 +25,7 @@ export default function Count({ count }) {
             alt="Increase count"
           ></Image>
         </button>
-        <button>
+        <button onClick={() => dicreaseCount(id)}>
           <Image
             src={`/icons/count_down.svg`}
             width={12}

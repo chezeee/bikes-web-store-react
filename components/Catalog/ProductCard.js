@@ -4,7 +4,7 @@ import Image from 'next/image';
 import css from './ProductCard.module.css';
 
 export default function ProductCard({ item }) {
-  const { id, brand, model, count } = item,
+  const { id, brand, model } = item,
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
@@ -14,17 +14,22 @@ export default function ProductCard({ item }) {
       }
 
       if (isInArray) {
-        let index = orders.findIndex((order) => order.id === id);
-
-        setOrders((old) => {
-          let newArr = [];
-          newArr = old;
-          newArr[index].count = Number(count) + 1;
-          return [...newArr];
+        setOrders((orders) => {
+          return orders.map((product) => {
+            if (product.id === id) {
+              return {
+                ...product,
+                count: Number(product.count) + 1,
+                totalPrice: product.price * (Number(product.count) + 1),
+              };
+            }
+            return product;
+          });
         });
       } else {
-        setOrders((old) => {
-          return old.concat(item);
+        setOrders((orders) => {
+          console.log('addToCart', orders);
+          return orders.concat(item);
         });
       }
     };
