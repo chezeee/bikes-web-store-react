@@ -15,8 +15,8 @@ export default memo(function Nav({}) {
   let counter = 0;
 
   // подсчет товаров, помещенных в корзину для отображения рядом с иконкой корзины
-  orders.map((item) => {
-    counter = counter + +item.count;
+  orders.map(({ count }) => {
+    counter = counter + Number(count);
   });
 
   return (

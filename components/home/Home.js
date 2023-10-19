@@ -1,6 +1,6 @@
 // import useSWR from 'swr';
 
-export default function HomePage({}) {
+export default function HomePage() {
   // const API = '',
   // fetcher = (url) => fetch(url).then((res) => res.json());
   // { data, error, isLoading, isValidating, mutate } = useSWR(API, fetcher);
