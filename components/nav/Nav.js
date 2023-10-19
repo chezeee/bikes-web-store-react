@@ -1,7 +1,7 @@
+import { memo, useContext } from 'react';
 import Link from 'next/link';
-import { useState, memo } from 'react';
+import { Context } from '../../context/orders';
 import css from './Nav.module.css';
-import { useOrdersContext } from '../../context/orders';
 
 const pages = [
   { href: '/', name: 'Главная' },
@@ -11,7 +11,7 @@ const pages = [
 ];
 
 export default memo(function Nav({}) {
-  const [orders, setOrders] = useOrdersContext();
+  const [orders, setOrders] = useContext(Context);
   let counter = 0;
 
   // подсчет товаров, помещенных в корзину для отображения рядом с иконкой корзины

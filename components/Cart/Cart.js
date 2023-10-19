@@ -1,11 +1,12 @@
-import { useOrdersContext } from '../../context/orders';
+import { useContext } from 'react';
+import { Context } from '../../context/orders';
 import CartItem from './CartItem';
 import Link from 'next/link';
 import { nanoid } from 'nanoid';
 import css from './Cart.module.css';
 
 export default function Cart() {
-  const [orders, setOrders] = useOrdersContext(),
+  const [orders, setOrders] = useContext(Context),
     deleteItem = (id) => {
       setOrders((orders) => orders.filter((item) => item.id !== id));
     };

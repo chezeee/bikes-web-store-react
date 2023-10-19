@@ -1,29 +1,32 @@
-import { useOrdersContext } from '../../context/orders';
-import css from './ProductCard.module.css';
+import { useContext } from 'react';
+import { Context } from '../../context/orders';
 import Image from 'next/image';
+import css from './ProductCard.module.css';
 
 export default function ProductCard({ item }) {
-  const { id, brand, model } = item,
-    [orders, setOrders] = useOrdersContext(),
+  const { id, brand, model, count } = item,
+    [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
-      orders.map((el) => {
-        if (el.id === item.id) {
-          setOrders((old) => {
-            let index = old.findIndex((el) => el.id === item.id);
-            old[index].count = 1 + +old[index].count;
-            return old;
-          });
-          isInArray = true;
-        }
-      });
-      if (!isInArray) {
+
+      if (orders.some((order) => order.id === id)) {
+        isInArray = true;
+      }
+
+      if (isInArray) {
+        let index = orders.findIndex((order) => order.id === id);
+
         setOrders((old) => {
-          old.push(item);
-          return old;
+          let newArr = [];
+          newArr = old;
+          newArr[index].count = Number(count) + 1;
+          return [...newArr];
+        });
+      } else {
+        setOrders((old) => {
+          return old.concat(item);
         });
       }
-      console.log('set to cart', orders);
     };
   return (
     <>

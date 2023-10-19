@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import css from './CartItem.module.css';
-import Count from '../Count/Count';
+import Count from '../count/Count';
 
 export default function CartItem({ item, deleteItem }) {
   const { id, brand, model, count } = item;
