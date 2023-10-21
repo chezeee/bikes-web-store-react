@@ -34,7 +34,7 @@ export default function SwiperBrands() {
       slidesPerView={2}
       autoplay={{
         delay: 1,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
         waitForTransition: true,
       }}
       speed={3000}
@@ -52,7 +52,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={cannondale}
-              quality={100}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
               alt="Cannondale logo"
@@ -65,7 +64,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={corratec}
-              quality={100}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
               alt="Corratec logo"
@@ -78,7 +76,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={eastern}
-              quality={100}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
               alt="Eastern logo"
@@ -91,7 +88,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={gt}
-              quality={100}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
               alt="GT logo"
@@ -104,7 +100,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={jamis}
-              quality={100}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
               alt="Jamis logo"
@@ -117,7 +112,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={mongoose}
-              quality={100}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
               alt="Mongoose logo"
@@ -130,7 +124,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={norco}
-              quality={100}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
               alt="Norco logo"
@@ -143,7 +136,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={outleap}
-              quality={100}
               sizes="100vw"
               style={{ width: '90%', height: 'auto' }}
               alt="Outleap logo"
@@ -156,7 +148,6 @@ export default function SwiperBrands() {
           <div className={css['img-wrapper']}>
             <Image
               src={wtp}
-              quality={100}
               sizes="100vw"
               style={{ width: '40%', height: 'auto' }}
               alt="WTP logo"
