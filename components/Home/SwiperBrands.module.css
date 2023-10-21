@@ -1,0 +1,32 @@
+.swiper {
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  margin: 50px 0;
+  -webkit-box-shadow: 5px 4px 23px -5px rgba(34, 60, 80, 0.14);
+  -moz-box-shadow: 5px 4px 23px -5px rgba(34, 60, 80, 0.14);
+  box-shadow: 5px 4px 23px -5px rgba(34, 60, 80, 0.14);
+  transition-timing-function : linear;
+}
+
+.swiper div {
+  transition-timing-function : linear;
+}
+
+.swiper-slide {
+  margin: 50px 0;
+  transition-timing-function : linear;
+}
+
+.swiper-slide a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+ 
+.img-wrapper {
+  width: 300px;
+  height: auto;
+}
+

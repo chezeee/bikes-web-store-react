@@ -1,4 +1,5 @@
 // import useSWR from 'swr';
+import SwiperBrands from './SwiperBrands';
 
 export default function HomePage({}) {
   // const API = '',
@@ -10,7 +11,7 @@ export default function HomePage({}) {
       <div>
         <h1>Bikes web store!</h1>
       </div>
-      <div>SWIPER</div>
+      <SwiperBrands />
     </>
   );
 }
