@@ -4,7 +4,7 @@ import Image from 'next/image';
 import css from './ProductCard.module.css';
 
 export default function ProductCard({ item }) {
-  const { id, brand, model } = item,
+  const { id, brand, model, type, collection, price } = item,
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
@@ -45,8 +45,11 @@ export default function ProductCard({ item }) {
             style={{ width: '45%', height: 'auto' }}
           />
         </div>
+        <div>Тип: {type}</div>
         <div>Бренд: {brand}</div>
         <div>Модель: {model}</div>
+        <div>Коллекция: {collection} г.</div>
+        <div>Цена: {price}</div>
         <button onClick={addToCart}>Добавить в корзину</button>
       </div>
     </>
