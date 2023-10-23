@@ -1,7 +1,6 @@
 import { memo, useContext } from 'react';
 import Link from 'next/link';
-import { Context } from '../../context/orders';
-import { ThemeSwitch } from '../theme-switch';
+import { Context } from '../../../context/orders';
 import css from './Nav.module.css';
 
 const pages = [
@@ -37,9 +36,6 @@ export default memo(function Nav({}) {
           <Link className={css.navLink} href={'/cart'}>
             {`🛒Корзина`}
           </Link>
-        </li>
-        <li>
-          <ThemeSwitch />
         </li>
         <li>
           <button>Sign in</button>

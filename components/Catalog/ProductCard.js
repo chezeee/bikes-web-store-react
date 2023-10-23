@@ -28,7 +28,6 @@ export default function ProductCard({ item }) {
         });
       } else {
         setOrders((orders) => {
-          console.log('addToCart', orders);
           return orders.concat(item);
         });
       }
