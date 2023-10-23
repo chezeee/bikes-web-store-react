@@ -13,11 +13,16 @@ const pages = [
 export default memo(function Nav({}) {
   const [orders, setOrders] = useContext(Context);
   let counter = 0;
+  let countCartClass = 'countInCart';
 
   // подсчет товаров, помещенных в корзину для отображения рядом с иконкой корзины
   orders.map((item) => {
     counter = counter + +item.count;
   });
+
+  if (counter < 1) {
+    countCartClass = 'disabled';
+  }
 
   return (
     <nav className={css['header-nav mainContainer']}>
@@ -32,7 +37,7 @@ export default memo(function Nav({}) {
           );
         })}
         <li className={css.cart_wrapper}>
-          <span className={css.countInCart}>{counter}</span>
+          <span className={css[`${countCartClass}`]}>{counter}</span>
           <Link className={css.navLink} href={'/cart'}>
             {`🛒Корзина`}
           </Link>
