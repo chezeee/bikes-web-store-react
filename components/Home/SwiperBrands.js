@@ -48,7 +48,10 @@ export default function SwiperBrands() {
       className={css.swiper}
     >
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link href={{
+            pathname: '/catalog',
+            query: { brand: 'cannondale' },
+          }}>
           <div className={css['img-wrapper']}>
             <Image
               src={cannondale}
