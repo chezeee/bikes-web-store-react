@@ -1,6 +1,6 @@
 import { memo, useContext } from 'react';
 import Link from 'next/link';
-import { Context } from '../../../context/orders';
+import { Context } from '@/context/orders';
 import css from './Nav.module.css';
 
 const pages = [

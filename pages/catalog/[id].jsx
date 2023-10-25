@@ -1,4 +1,4 @@
-import Nav from '../../components/Layouts/Nav/Nav';
+import Nav from '@/components/Layouts/Nav/Nav';
 
 // export const getStaticPaths = async () => {
 //   const res = await fetch('https://localhost:5000/products');

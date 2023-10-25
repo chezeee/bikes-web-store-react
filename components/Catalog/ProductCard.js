@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Context } from '../../context/orders';
+import { Context } from '@/context/orders';
 import Image from 'next/image';
 import css from './ProductCard.module.css';
 

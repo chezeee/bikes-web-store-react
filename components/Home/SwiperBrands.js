@@ -16,15 +16,15 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
-import cannondale from '../../public/images/brands/cannondale_logo.jpg';
-import corratec from '../../public/images/brands/corratec_logo.jpg';
-import eastern from '../../public/images/brands/eastern_logo.jpg';
-import gt from '../../public/images/brands/gt_logo.jpg';
-import jamis from '../../public/images/brands/jamis_logo.jpg';
-import mongoose from '../../public/images/brands/mongoose_logo.jpg';
-import norco from '../../public/images/brands/norco_logo.jpg';
-import outleap from '../../public/images/brands/outleap_logo.jpg';
-import wtp from '../../public/images/brands/wtp_logo.jpg';
+import cannondale from '@/public/images/brands/cannondale_logo.jpg';
+import corratec from '@/public/images/brands/corratec_logo.jpg';
+import eastern from '@/public/images/brands/eastern_logo.jpg';
+import gt from '@/public/images/brands/gt_logo.jpg';
+import jamis from '@/public/images/brands/jamis_logo.jpg';
+import mongoose from '@/public/images/brands/mongoose_logo.jpg';
+import norco from '@/public/images/brands/norco_logo.jpg';
+import outleap from '@/public/images/brands/outleap_logo.jpg';
+import wtp from '@/public/images/brands/wtp_logo.jpg';
 
 export default function SwiperBrands() {
   return (
@@ -48,10 +48,12 @@ export default function SwiperBrands() {
       className={css.swiper}
     >
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={{
+        <Link
+          href={{
             pathname: '/catalog',
             query: { brand: 'cannondale' },
-          }}>
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={cannondale}
@@ -63,7 +65,12 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'corratec' },
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={corratec}
@@ -75,7 +82,13 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'} className={css['swiper-slide-link']}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'eastern' },
+          }}
+          className={css['swiper-slide-link']}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={eastern}
@@ -87,7 +100,12 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'gt' },
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={gt}
@@ -99,7 +117,12 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'jamis' },
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={jamis}
@@ -111,7 +134,12 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'mongoose' },
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={mongoose}
@@ -123,7 +151,12 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'norco' },
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={norco}
@@ -135,7 +168,12 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'outleap' },
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={outleap}
@@ -147,7 +185,12 @@ export default function SwiperBrands() {
         </Link>
       </SwiperSlide>
       <SwiperSlide className={css['swiper-slide']}>
-        <Link href={'#'}>
+        <Link
+          href={{
+            pathname: '/catalog',
+            query: { brand: 'wtp' },
+          }}
+        >
           <div className={css['img-wrapper']}>
             <Image
               src={wtp}

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Context } from '../../context/orders';
+import { Context } from '@/context/orders';
 import CartItem from './CartItem';
 import Link from 'next/link';
 import { nanoid } from 'nanoid';

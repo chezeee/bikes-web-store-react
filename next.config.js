@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  // reactStrictMode: true,
   // eslint: { ignoreDuringBuilds: true }, // eslint:disable
   
   experimental: { esmExternals: true }, // Для правильного импорта SWR
