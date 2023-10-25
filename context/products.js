@@ -1,4 +1,4 @@
-// export const data = [
+// export const localData = [
 //   {
 //     id: '1',
 //     type: 'mountain',

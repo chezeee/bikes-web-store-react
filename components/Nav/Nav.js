@@ -2,6 +2,7 @@ import { memo, useContext } from 'react';
 import Link from 'next/link';
 import { Context } from '@/context/orders';
 import css from './Nav.module.css';
+import Login from './Login-btn';
 
 const pages = [
   { href: '/', name: 'Главная' },
@@ -43,7 +44,7 @@ export default memo(function Nav({}) {
           </Link>
         </li>
         <li>
-          <button>Sign in</button>
+          <Login />
         </li>
       </ul>
     </nav>

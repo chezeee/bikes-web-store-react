@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Cart from '@/components/Cart/Cart';
-import Nav from '@/components/Layouts/Nav/Nav';
+import Nav from '@/components/Nav/Nav';
 
 export default function ItemsCatalog({}) {
   return (
