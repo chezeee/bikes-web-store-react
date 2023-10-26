@@ -17,7 +17,8 @@
 - NextJS;
 - http-server;
 - swr;
-- react-bootstrap / next ui;
+- next auth
+- next ui;
 - nanoid
 
 ## Install
