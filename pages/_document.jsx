@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/icons/fav_logo.ico" />
       </Head>
-      <body>
+      <body className="min-h-screen font-sans antialiased">
         <Main />
         <NextScript />
       </body>

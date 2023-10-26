@@ -1,4 +1,4 @@
-// import useSWR from 'swr';
+import { Button } from '@nextui-org/react';
 import SwiperBrands from './SwiperBrands';
 
 export default function HomePage({}) {
@@ -10,6 +10,7 @@ export default function HomePage({}) {
     <>
       <div>
         <h1>Bikes web store!</h1>
+        <Button color='primary'>Тест кнопка</Button>
       </div>
       <SwiperBrands />
     </>

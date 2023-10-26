@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import css from './CartItem.module.css';
 import Count from '@/components/Count/Count';
+import { Button } from '@nextui-org/react';
 
 export default function CartItem({
   item,
@@ -32,9 +33,15 @@ export default function CartItem({
           increaseCount={increaseCount}
           dicreaseCount={dicreaseCount}
         />
-        <button className={css['delete-button']} onClick={() => deleteItem(id)}>
+        <Button
+          isIconOnly
+          color="warning"
+          variant="faded"
+          className={css['delete-button']}
+          onClick={() => deleteItem(id)}
+        >
           ❌
-        </button>
+        </Button>
       </div>
     </div>
   );

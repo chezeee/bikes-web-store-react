@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Context } from '@/context/orders';
 import Image from 'next/image';
 import css from './ProductCard.module.css';
+import { Button } from '@nextui-org/react';
 
 export default function ProductCard({ item }) {
   const { id, brand, model, type, collection, price } = item,
@@ -50,7 +51,9 @@ export default function ProductCard({ item }) {
         <div>Модель: {model}</div>
         <div>Коллекция: {collection} г.</div>
         <div>Цена: {price}</div>
-        <button onClick={addToCart}>Добавить в корзину</button>
+        <Button color="primary" onClick={addToCart}>
+          Добавить в корзину
+        </Button>
       </div>
     </>
   );
