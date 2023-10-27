@@ -1,3 +1,7 @@
+.swiper-container {
+  padding: 0 2%;
+}
+
 .swiper {
   background-color: rgb(255, 255, 255);
   border-radius: 40px;
@@ -19,14 +23,19 @@
 
 .swiper-slide a {
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 5vw;
+  max-height: 60px;
+  max-width: max-content;
 }
  
 .img-wrapper {
   width: 300px;
-  height: auto;
+
+}
+
+.img-wrapper img {
+  display: inline;
 }
 

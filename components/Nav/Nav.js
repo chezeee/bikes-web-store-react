@@ -26,7 +26,7 @@ export default memo(function Nav({}) {
   }
 
   return (
-    <nav className={css['header-nav mainContainer']}>
+    <nav className={css['header-nav']}>
       <ul className={css['flex_wrapper']}>
         {pages.map(({ href, name }) => {
           return (

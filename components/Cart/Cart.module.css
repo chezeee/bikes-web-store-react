@@ -1,6 +1,7 @@
 .itemCards{
   width: 100%;
   text-align: center;
+  background: #f3f3f3;
 }
 
 .itemCards ol {

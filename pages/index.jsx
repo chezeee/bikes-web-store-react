@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import HomePage from '@/components/Home/Home';
 import Nav from '@/components/Nav/Nav';
+import HomePage from '@/components/Home/Home';
 
 export default function Home() {
   return (
@@ -11,11 +11,11 @@ export default function Home() {
       <header>
         <Nav />
       </header>
-      <main>
-        <section className="mainContainer">
+      <section className="mainContainer">
+        <main>
           <HomePage />
-        </section>
-      </main>
+        </main>
+      </section>
     </>
   );
 }

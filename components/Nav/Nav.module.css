@@ -1,5 +1,11 @@
+.header-nav {
+  width: 100%;
+  background-color: rgb(185, 185, 185);
+}
+
 .flex_wrapper {
-  margin-top: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

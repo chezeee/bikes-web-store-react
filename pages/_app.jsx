@@ -15,9 +15,7 @@ export default function MyApp({
         <NextThemesProvider>
           <OrdersProvider>
             <div className="flexWrap">
-              <main>
-                <Component {...pageProps} />
-              </main>
+              <Component {...pageProps} />
               <footer>FOOTER</footer>
             </div>
           </OrdersProvider>

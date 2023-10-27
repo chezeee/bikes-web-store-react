@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Catalog from '@/components/Catalog/Catalog';
 import Nav from '@/components/Nav/Nav';
+import Content from '@/components/Content/Content';
 
 export default function ItemsCatalog({}) {
   return (
@@ -11,11 +11,11 @@ export default function ItemsCatalog({}) {
       <header>
         <Nav />
       </header>
-      <main>
-        <section className="mainContainer">
-          <Catalog />
-        </section>
-      </main>
+      <section className="mainContainer">
+        <main>
+          <Content />
+        </main>
+      </section>
     </>
   );
 }
