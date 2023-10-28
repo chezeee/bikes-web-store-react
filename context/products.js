@@ -1,7 +1,8 @@
 export const localData = [
   {
     id: 1,
-    type: 'mountain',
+    type: 'Горный велосипед',
+    filterType: 'горные',
     brandLogo: '/public/images/brands/outleap_logo.jpg',
     brand: 'Outleap',
     model: 'GRACE EXPERT',
@@ -14,7 +15,8 @@ export const localData = [
   },
   {
     id: 2,
-    type: 'mountain',
+    type: 'Горный велосипед',
+    filterType: 'горные',
     brandLogo: '/public/images/brands/jamis_logo.jpg',
     brand: 'Jamis',
     model: 'HELIX A2',
@@ -27,7 +29,8 @@ export const localData = [
   },
   {
     id: 3,
-    type: 'mountain',
+    type: 'Горный велосипед',
+    filterType: 'горные',
     brandLogo: '/public/images/brands/corratec_logo.jpg',
     brand: 'Corratec',
     model: 'VERT HALCON',
@@ -40,7 +43,8 @@ export const localData = [
   },
   {
     id: 4,
-    type: 'mountain',
+    type: 'Горный велосипед',
+    filterType: 'горные',
     brandLogo: '/public/images/brands/cannondale_logo.jpg',
     brand: 'Cannondale',
     model: '24 KIDS TRAIL',
@@ -53,7 +57,8 @@ export const localData = [
   },
   {
     id: 5,
-    type: 'mountain',
+    type: 'Горный велосипед',
+    filterType: 'горные',
     brandLogo: '/public/images/brands/gt_logo.jpg',
     brand: 'GT',
     model: 'AVALANCHE SPORT',
@@ -66,7 +71,8 @@ export const localData = [
   },
   {
     id: 6,
-    type: 'mountain',
+    type: 'Горный велосипед',
+    filterType: 'горные',
     brandLogo: '/public/images/brands/mongoose_logo.jpg',
     brand: 'Mongoose',
     model: 'SWITCHBACK SPORT',
@@ -79,7 +85,8 @@ export const localData = [
   },
   {
     id: 7,
-    type: 'mountain',
+    type: 'Горный велосипед',
+    filterType: 'горные',
     brandLogo: '/public/images/brands/norco_logo.jpg',
     brand: 'Norco',
     model: 'OPTIC C2',
@@ -92,7 +99,8 @@ export const localData = [
   },
   {
     id: 8,
-    type: 'bmx',
+    type: 'BMX',
+    filterType: 'BMX',
     brandLogo: '/public/images/brands/outleap_logo.jpg',
     brand: 'Outleap',
     model: 'TROTTER',
@@ -105,7 +113,8 @@ export const localData = [
   },
   {
     id: 9,
-    type: 'bmx',
+    type: 'BMX',
+    filterType: 'BMX',
     brandLogo: '/public/images/brands/wtp_logo.jpg',
     brand: 'WeThePeople',
     model: 'VERSUS',
@@ -118,7 +127,8 @@ export const localData = [
   },
   {
     id: 10,
-    type: 'bmx',
+    type: 'BMX',
+    filterType: 'BMX',
     brandLogo: '/public/images/brands/gt_logo.jpg',
     brand: 'GT',
     model: 'AIR',
@@ -131,7 +141,8 @@ export const localData = [
   },
   {
     id: 11,
-    type: 'runbike',
+    type: 'Беговел',
+    filterType: 'беговелы',
     brandLogo: '/public/images/brands/corratec_logo.jpg',
     brand: 'Corratec',
     model: 'KIDDO',
@@ -144,7 +155,8 @@ export const localData = [
   },
   {
     id: 12,
-    type: 'runbike',
+    type: 'Беговел',
+    filterType: 'беговелы',
     brandLogo: '/public/images/brands/eastern_logo.jpg',
     brand: 'Eastern',
     model: 'PUSHER',
@@ -157,7 +169,8 @@ export const localData = [
   },
   {
     id: 13,
-    type: 'runbike',
+    type: 'Беговел',
+    filterType: 'беговелы',
     brandLogo: '/public/images/brands/cannondale_logo.jpg',
     brand: 'Cannondale',
     model: 'KIDS TRAIL BALANCE',
@@ -170,7 +183,8 @@ export const localData = [
   },
   {
     id: 14,
-    type: 'touring',
+    type: 'Прогулочный велосипед',
+    filterType: 'прогулочные',
     brandLogo: '/public/images/brands/jamis_logo.jpg',
     brand: 'Jamis',
     model: 'CODA S3',
@@ -183,7 +197,8 @@ export const localData = [
   },
   {
     id: 15,
-    type: 'touring',
+    type: 'Прогулочный велосипед',
+    filterType: 'прогулочные',
     brandLogo: '/public/images/brands/mongoose_logo.jpg',
     brand: 'Mongoose',
     model: 'MAURICE PLUS',
@@ -196,7 +211,8 @@ export const localData = [
   },
   {
     id: 16,
-    type: 'touring',
+    type: 'Прогулочный велосипед',
+    filterType: 'прогулочные',
     brandLogo: '/public/images/brands/cannondale_logo.jpg',
     brand: 'Cannondale',
     model: 'TREADWELL 3 REMIXTE',

@@ -2,7 +2,8 @@
   "products": [
     {
       "id": 1,
-      "type": "mountain",
+      "type": "Горный велосипед",
+      "filterType": "горные",
       "brandLogo": "/public/images/brands/outleap_logo.jpg",
       "brand": "Outleap",
       "model": "GRACE EXPERT",
@@ -14,7 +15,8 @@
     },
     {
       "id": 2,
-      "type": "mountain",
+      "type": "Горный велосипед",
+      "filterType": "горные",
       "brandLogo": "/public/images/brands/jamis_logo.jpg",
       "brand": "Jamis",
       "model": "HELIX A2",
@@ -26,7 +28,8 @@
     },
     {
       "id": 3,
-      "type": "mountain",
+      "type": "Горный велосипед",
+      "filterType": "горные",
       "brandLogo": "/public/images/brands/corratec_logo.jpg",
       "brand": "Corratec",
       "model": "VERT HALCON",
@@ -38,7 +41,8 @@
     },
     {
       "id": 4,
-      "type": "mountain",
+      "type": "Горный велосипед",
+      "filterType": "горные",
       "brandLogo": "/public/images/brands/cannondale_logo.jpg",
       "brand": "Cannondale",
       "model": "24 KIDS TRAIL",
@@ -50,7 +54,8 @@
     },
     {
       "id": 5,
-      "type": "mountain",
+      "type": "Горный велосипед",
+      "filterType": "горные",
       "brandLogo": "/public/images/brands/gt_logo.jpg",
       "brand": "GT",
       "model": "AVALANCHE SPORT",
@@ -62,7 +67,8 @@
     },
     {
       "id": 6,
-      "type": "mountain",
+      "type": "Горный велосипед",
+      "filterType": "горные",
       "brandLogo": "/public/images/brands/mongoose_logo.jpg",
       "brand": "Mongoose",
       "model": "SWITCHBACK SPORT",
@@ -74,7 +80,8 @@
     },
     {
       "id": 7,
-      "type": "mountain",
+      "type": "Горный велосипед",
+      "filterType": "горные",
       "brandLogo": "/public/images/brands/norco_logo.jpg",
       "brand": "Norco",
       "model": "OPTIC C2",
@@ -86,7 +93,8 @@
     },
     {
       "id": 8,
-      "type": "bmx",
+      "type": "BMX",
+      "filterType": "BMX",
       "brandLogo": "/public/images/brands/outleap_logo.jpg",
       "brand": "Outleap",
       "model": "TROTTER",
@@ -98,7 +106,8 @@
     },
     {
       "id": 9,
-      "type": "bmx",
+      "type": "BMX",
+      "filterType": "BMX",
       "brandLogo": "/public/images/brands/wtp_logo.jpg",
       "brand": "WeThePeople",
       "model": "VERSUS",
@@ -110,7 +119,8 @@
     },
     {
       "id": 10,
-      "type": "bmx",
+      "type": "BMX",
+      "filterType": "BMX",
       "brandLogo": "/public/images/brands/gt_logo.jpg",
       "brand": "GT",
       "model": "AIR",
@@ -122,7 +132,8 @@
     },
     {
       "id": 11,
-      "type": "runbike",
+      "type": "Беговел",
+      "filterType": "беговелы",
       "brandLogo": "/public/images/brands/corratec_logo.jpg",
       "brand": "Corratec",
       "model": "KIDDO",
@@ -134,7 +145,8 @@
     },
     {
       "id": 12,
-      "type": "runbike",
+      "type": "Беговел",
+      "filterType": "беговелы",
       "brandLogo": "/public/images/brands/eastern_logo.jpg",
       "brand": "Eastern",
       "model": "PUSHER",
@@ -146,7 +158,8 @@
     },
     {
       "id": 13,
-      "type": "runbike",
+      "type": "Беговел",
+      "filterType": "беговелы",
       "brandLogo": "/public/images/brands/cannondale_logo.jpg",
       "brand": "Cannondale",
       "model": "KIDS TRAIL BALANCE",
@@ -158,7 +171,8 @@
     },
     {
       "id": 14,
-      "type": "touring",
+      "type": "Прогулочный велосипед",
+      "filterType": "прогулочные",
       "brandLogo": "/public/images/brands/jamis_logo.jpg",
       "brand": "Jamis",
       "model": "CODA S3",
@@ -170,7 +184,8 @@
     },
     {
       "id": 15,
-      "type": "touring",
+      "type": "Прогулочный велосипед",
+      "filterType": "прогулочные",
       "brandLogo": "/public/images/brands/mongoose_logo.jpg",
       "brand": "Mongoose",
       "model": "MAURICE PLUS",
@@ -182,7 +197,8 @@
     },
     {
       "id": 16,
-      "type": "touring",
+      "type": "Прогулочный велосипед",
+      "filterType": "прогулочные",
       "brandLogo": "/public/images/brands/cannondale_logo.jpg",
       "brand": "Cannondale",
       "model": "TREADWELL 3 REMIXTE",

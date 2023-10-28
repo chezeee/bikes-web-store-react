@@ -52,7 +52,7 @@ export default function Cart() {
   );
 
   return (
-    <>
+    <div className={css['cart-container']}>
       {(orders.length && (
         <div className={css['itemCards']}>
           <ol>
@@ -74,6 +74,6 @@ export default function Cart() {
         </div>
       )) || <div>Корзина пуста!</div>}
       <Link href={'/catalog'}>Продолжить покупки</Link>
-    </>
+    </div>
   );
 }

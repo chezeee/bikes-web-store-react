@@ -1,5 +1,5 @@
-import Catalog from './Catalog';
-import Sidebar from './Sidebar';
+import Catalog from './Catalog/Catalog';
+import Sidebar from './Sidebar/Sidebar';
 import { localData } from '@/context/products';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
@@ -45,13 +45,14 @@ export default function Content() {
   // if (error) {
   //   return <>{error.message}</>;
   // }
+
   if (isLoading) return <Spinner size="lg" color="primary" />;
 
   return (
     <>
       <div className={css['flex-wrapper']}>
         <section className={css['sidebar-container']}>
-          <Sidebar />
+          <Sidebar data={data || localData} />
         </section>
         <section className={css['catalog-container']}>
           <Catalog data={filteredData} />

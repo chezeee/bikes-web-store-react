@@ -50,7 +50,7 @@ export default function ProductCard({ item }) {
         <div>Бренд: {brand}</div>
         <div>Модель: {model}</div>
         <div>Коллекция: {collection} г.</div>
-        <div>Цена: {price}</div>
+        <div>Цена: {price} ₽</div>
         <Button color="primary" onClick={addToCart}>
           Добавить в корзину
         </Button>
