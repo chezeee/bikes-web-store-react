@@ -15,11 +15,11 @@
 
 - React
 - NextJS
-- nextAuth
-- nextUI
-- http-server
-- swr
-- nanoid
+- NextAuth
+- NextUI
+- Http-server
+- Swr
+- Nanoid
 
 ## Install
 
