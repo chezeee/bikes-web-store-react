@@ -3,6 +3,7 @@
   padding: 10px;
   margin: 0 1em;
   max-width: 400px;
+  color: black;
 }
 
 .flex-wrapper {
@@ -20,6 +21,7 @@
 
 .cartItem-descr {
   text-align: start;
+  
 }
 
 .delete-button {

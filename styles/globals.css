@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: black;
+  /* color: black; */
 }
 
 body {
@@ -42,5 +42,6 @@ footer {
   text-align: center;
   padding: 20px 0;
   background-color: rgb(185, 185, 185);
+  color: black;
 }
 
