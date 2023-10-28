@@ -1,24 +1,13 @@
-import Link from 'next/link';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import NotFoundPage from '@/components/Layouts/NotFoundPage';
 
-export default function NotFoundPage() {
-  const router = useRouter();
-
-  useEffect(() => {
-    setTimeout(() => {
-      router.push('/');
-    }, 2000);
-    console.log('Test');
-  }, [router]);
-
+export default function NotFoundPage404() {
   return (
-    <div>
-      <h1>Упс...</h1>
-      <h2>Такой страницы здесь нет</h2>
-      <p>
-        Вы вернётесь на <Link href="/">главную страницу</Link> через 2 секунды
-      </p>
-    </div>
+    <>
+      <section className="mainContainer">
+        <main>
+          <NotFoundPage />
+        </main>
+      </section>
+    </>
   );
 }
