@@ -1,9 +1,12 @@
 .header-nav {
+  display: inline;
+  vertical-align: middle;
   width: 100%;
-  background-color: rgb(185, 185, 185);
 }
 
 .flex_wrapper {
+  height: 64px;
+  background-color: rgb(185, 185, 185);
   max-width: 1300px;
   margin: 0 auto;
   display: flex;

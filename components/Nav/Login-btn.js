@@ -20,7 +20,7 @@ export default function Login() {
             alt="Login user avatar image"
           ></Image>
         )}
-        Signed in as {session?.user?.name} <br />
+        {session?.user?.name} <br />
         <Button onClick={() => signOut()}>Sign out</Button>
       </div>
     );
