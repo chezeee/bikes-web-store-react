@@ -17,7 +17,7 @@ export default function Content() {
   const router = useRouter(),
     { brand } = router.query,
     { data, error, isLoading } = useSWR(
-      'http://localhost:5002/products',
+      'http://localhost:5000/products',
       fetcher
     );
   let filteredData;
