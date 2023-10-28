@@ -52,7 +52,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'cannondale' },
+              query: { brand: 'Cannondale' },
             }}
           >
             <div className={css['img-wrapper']}>
@@ -69,7 +69,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'corratec' },
+              query: { brand: 'Corratec' },
             }}
           >
             <div className={css['img-wrapper']}>
@@ -86,7 +86,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'eastern' },
+              query: { brand: 'Eastern' },
             }}
             className={css['swiper-slide-link']}
           >
@@ -104,7 +104,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'gt' },
+              query: { brand: 'GT' },
             }}
           >
             <div className={css['img-wrapper']}>
@@ -121,7 +121,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'jamis' },
+              query: { brand: 'Jamis' },
             }}
           >
             <div className={css['img-wrapper']}>
@@ -138,7 +138,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'mongoose' },
+              query: { brand: 'Mongoose' },
             }}
           >
             <div className={css['img-wrapper']}>
@@ -155,7 +155,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'norco' },
+              query: { brand: 'Norco' },
             }}
           >
             <div className={css['img-wrapper']}>
@@ -172,7 +172,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'outleap' },
+              query: { brand: 'Outleap' },
             }}
           >
             <div className={css['img-wrapper']}>
@@ -189,7 +189,7 @@ export default function SwiperBrands() {
           <Link
             href={{
               pathname: '/catalog',
-              query: { brand: 'wethepeople' },
+              query: { brand: 'WeThePeople' },
             }}
           >
             <div className={css['img-wrapper']}>

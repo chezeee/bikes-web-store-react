@@ -1,10 +1,26 @@
-import FilterRadioGroups from './FilterRadioGroups';
-import css from './Sidebar.module.css'
+import FilterCheckGroups from './FilterCheckGroups';
+import css from './Sidebar.module.css';
 
-export default function Sidebar({ data }) {
+export default function Sidebar({
+  data,
+  selectedTypes,
+  selectedBrands,
+  selectedCollections,
+  setCheckedTypes,
+  setCheckedBrands,
+  setCheckedCollections,
+}) {
   return (
     <div className={css['filter-container']}>
-      <FilterRadioGroups data={data} />
+      <FilterCheckGroups
+        data={data}
+        selectedTypes={selectedTypes}
+        selectedBrands={selectedBrands}
+        selectedCollections={selectedCollections}
+        setCheckedTypes={setCheckedTypes}
+        setCheckedBrands={setCheckedBrands}
+        setCheckedCollections={setCheckedCollections}
+      />
     </div>
   );
 }
