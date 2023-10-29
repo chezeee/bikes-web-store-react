@@ -8,13 +8,13 @@
 }
 
 .sidebar-container {
-  width: 20vw;
+  width: 15vw;
   border-right: 1px solid black;
   background: rgb(29, 41, 59);
   min-height: calc(100vh - 129px);
 }
 
 .catalog-container {
-  width: 80vw;
+  width: 85vw;
   min-height: calc(100vh - 129px);
 }

@@ -19,17 +19,31 @@ export default function Content() {
       'http://localhost:5000/products',
       fetcher
     ),
-    [selectedTypes, setTypes] = useState([]),
-    [selectedBrands, setBrands] = useState(brand ? [brand] : []),
-    [selectedCollections, setCollections] = useState([]),
-    setCheckedTypes = (values) => {
-      setTypes(values);
-    },
-    setCheckedBrands = (values) => {
-      setBrands(values);
-    },
-    setCheckedCollections = (values) => {
-      setCollections(values);
+    [selectedTypes, setTypes] = useState([]), //for filtering by type
+    [selectedBrands, setBrands] = useState(brand ? [brand] : []), //for filtering by brand
+    [selectedCollections, setCollections] = useState([]), //for filtering by collection
+    [sortValue, setSortValue] = useState(null), //for sorting by value
+    setCheckedTypes = (values) => setTypes(values),
+    setCheckedBrands = (values) => setBrands(values),
+    setCheckedCollections = (values) => setCollections(values),
+    setSortedValue = (value) => setSortValue([...value].join(', ')),
+    sortingByValue = (prevItem, nextItem) => {
+      switch (sortValue) {
+        case 'priceMinToMax':
+          return prevItem.price - nextItem.price;
+        case 'priceMaxToMin':
+          return nextItem.price - prevItem.price;
+        case 'brand':
+          return prevItem.brand.localeCompare(nextItem.brand);
+        case 'model':
+          return prevItem.model.localeCompare(nextItem.model);
+        case 'collectionOld':
+          return prevItem.collection - nextItem.collection;
+        case 'collectionNew':
+          return nextItem.collection - prevItem.collection;
+        default:
+          break;
+      }
     };
 
   let filteredData;
@@ -93,7 +107,10 @@ export default function Content() {
           />
         </section>
         <section className={css['catalog-container']}>
-          <Catalog data={filteredData} />
+          <Catalog
+            data={filteredData.toSorted(sortingByValue)}
+            setSortedValue={setSortedValue}
+          />
         </section>
       </div>
     </>
