@@ -4,11 +4,10 @@ import { Context } from '@/context/orders';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
 import css from './ProductCard.module.css';
-import { subtitle } from '@/components/primitives';
 
 export default function ProductCard({ item }) {
-  const { id, brand, model, type, collection, price, img } = item,
-    itemData = JSON.stringify(item),
+  const { id, brand, model, type, collection, description, price, img } = item,
+    // itemData = JSON.stringify(item),
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
@@ -43,7 +42,13 @@ export default function ProductCard({ item }) {
           href={{
             pathname: `/catalog/${id}`,
             query: {
-              item: itemData,
+              id: id,
+              brand: brand,
+              model: model,
+              type: type,
+              description: description,
+              collection: collection,
+              price: price,
             },
           }}
         >

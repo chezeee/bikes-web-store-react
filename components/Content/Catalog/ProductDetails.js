@@ -8,9 +8,9 @@ import css from './ProductDetails.module.css';
 
 export default function ProductDetails({}) {
   const router = useRouter(),
-    { item } = router.query,
-    itemData = JSON.parse(item),
-    { id, type, brand, model, description, collection, price } = itemData,
+    { id, type, brand, model, description, collection, price } = router.query,
+    // itemData = JSON.parse(item),
+    // { id, type, brand, model, description, collection, price } = itemData,
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
@@ -33,7 +33,8 @@ export default function ProductDetails({}) {
         });
       } else {
         setOrders((orders) => {
-          return orders.concat(itemData);
+          return;
+          // return orders.concat(itemData);  // временно
         });
       }
     };
