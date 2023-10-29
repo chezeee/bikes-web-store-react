@@ -1,29 +1,18 @@
-.card-container {
-  border: 1px solid rgba(129, 129, 129, 0.565);
-  padding: 10px;
-  margin: 0 1em;
-  max-width: 400px;
-  color: black;
+div.card-price h2{
+  font-size: 20px;
+  text-align: end;
+  color: aliceblue;
 }
 
-.flex-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 30px;
-  align-items: center;
-}
-
-.cartItem-image {
-  margin-left: 15px;
-  width: 125px;
-}
-
-.cartItem-descr {
+.item-name{
   text-align: start;
-  
 }
 
-.delete-button {
-  height: 25px;
+.descr-flex {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: stretch;
 }

@@ -33,9 +33,11 @@ export default function Details() {
       <header>
         <Nav />
       </header>
-      <main>
-        <ProductDetails />
-      </main>
+      <section className="mainContainer">
+        <main>
+          <ProductDetails />
+        </main>
+      </section>
     </>
   );
 }

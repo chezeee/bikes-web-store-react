@@ -17,9 +17,11 @@ export default function PaginatedData({ data, pageSize }) {
   return (
     <>
       <div className={css['products-container']}>
-        {paginatedData.map((item) => {
-          return <ProductCard key={item.id} item={item} />;
-        })}
+        <div className="gap-2 grid grid-cols-1 md:grid-cols-3">
+          {paginatedData.map((item) => {
+            return <ProductCard key={item.id} item={item} />;
+          })}
+        </div>
       </div>
       <Pagination
         total={totalPages}

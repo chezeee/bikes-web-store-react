@@ -10,7 +10,6 @@
 }
 
 .itemCards{
-  width: 100%;
   text-align: center;
   background: #f3f3f3;
 }
@@ -25,7 +24,6 @@
 }
 
 .totalPrice{
-  text-align: end;
-  margin-right: 230px;
+  text-align: center;
   padding-bottom: 20px;
 }

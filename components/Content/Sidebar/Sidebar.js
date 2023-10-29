@@ -11,7 +11,7 @@ export default function Sidebar({
   setCheckedCollections,
 }) {
   return (
-    <div className={css['filter-container']}>
+    <div className={css['filter-sidebar']}>
       <FilterCheckGroups
         data={data}
         selectedTypes={selectedTypes}

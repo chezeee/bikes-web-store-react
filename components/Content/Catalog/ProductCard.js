@@ -1,12 +1,13 @@
+import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import { useContext } from 'react';
 import { Context } from '@/context/orders';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
 import css from './ProductCard.module.css';
+import { subtitle } from '@/components/primitives';
 
 export default function ProductCard({ item }) {
-  const { id, brand, model, type, collection, price } = item,
+  const { id, brand, model, type, collection, price, img } = item,
     itemData = JSON.stringify(item),
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
@@ -36,8 +37,8 @@ export default function ProductCard({ item }) {
       }
     };
   return (
-    <>
-      <div className={css['card-container']}>
+    <Card shadow="sm" key={id} isPressable>
+      <CardBody className="overflow-visible p-0">
         <Link
           href={{
             pathname: `/catalog/${id}`,
@@ -46,26 +47,34 @@ export default function ProductCard({ item }) {
             },
           }}
         >
-          <div>
-            <Image
-              src={`/images/${id}.jpg`}
-              alt="Изображение товара"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '45%', height: 'auto' }}
-            />
-          </div>
-          <div>Тип: {type}</div>
-          <div>Бренд: {brand}</div>
-          <div>Модель: {model}</div>
-          <div>Коллекция: {collection} г.</div>
-          <div>Цена: {price} ₽</div>
+          <Image
+            shadow="sm"
+            radius="lg"
+            width="100%"
+            alt={`${type} ${brand} ${model}`}
+            className="w-full object-cover h-[220px]"
+            src={img}
+          />
         </Link>
-        <Button color="primary" onClick={addToCart}>
-          Добавить в корзину
-        </Button>
-      </div>
-    </>
+      </CardBody>
+      <CardFooter className={{ footer: 'text-small justify-between' }}>
+        <div className={css['descr-flex']}>
+          <div className={css['item-name']}>
+            <b>
+              {`${type} ${brand}`}
+              <br />
+              {`${model}`}
+            </b>
+            <div>Сезон: {collection} г.</div>
+          </div>
+          <div className={css['card-price']}>
+            <h2>{price} ₽</h2>
+          </div>
+          <Button size="md" color="default" onClick={addToCart}>
+            Добавить в корзину
+          </Button>
+        </div>
+      </CardFooter>
+    </Card>
   );
 }

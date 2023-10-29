@@ -40,7 +40,7 @@ export default function CartItem({
           className={css['delete-button']}
           onClick={() => deleteItem(id)}
         >
-          ❌
+          ❌Убрать
         </Button>
       </div>
     </div>

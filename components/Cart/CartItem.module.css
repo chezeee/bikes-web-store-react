@@ -32,10 +32,11 @@
 
 .cartItem-descr {
   text-align: start;
-  width: 240px;
+  width: 180px;
 }
 
 .delete-button {
+  width: 80px;
   right: 0;
   height: 25px;
 }

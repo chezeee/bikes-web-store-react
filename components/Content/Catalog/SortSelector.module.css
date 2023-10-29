@@ -1,0 +1,6 @@
+.sortSelector {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
