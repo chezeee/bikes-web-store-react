@@ -10,7 +10,6 @@ export default function NotFoundPage() {
     setTimeout(() => {
       router.push('/');
     }, 2000);
-    console.log('Test');
   }, [router]);
 
   return (

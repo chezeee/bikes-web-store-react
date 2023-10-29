@@ -1,3 +1,4 @@
+import ProductDetails from '@/components/Content/Catalog/ProductDetails';
 import Nav from '@/components/Nav/Nav';
 
 // export const getStaticPaths = async () => {
@@ -33,9 +34,7 @@ export default function Details() {
         <Nav />
       </header>
       <main>
-        <div>
-          <h1>Details</h1>
-        </div>
+        <ProductDetails />
       </main>
     </>
   );

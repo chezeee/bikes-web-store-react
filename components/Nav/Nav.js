@@ -17,9 +17,10 @@ export default memo(function Nav({}) {
   let countCartClass = 'countInCart';
 
   // подсчет товаров, помещенных в корзину для отображения рядом с иконкой корзины
-  orders.map((item) => {
-    counter = counter + +item.count;
-  });
+  orders &&
+    orders.map((item) => {
+      counter = counter + +item.count;
+    });
 
   if (counter < 1) {
     countCartClass = 'disabled';

@@ -1,4 +1,3 @@
-// import ProductCard from './ProductCard';
 import PaginatedData from './PaginatedData';
 import SortSelector from './SortSelector';
 
