@@ -225,11 +225,48 @@
       "totalPrice": 70486
     }
   ],
-  "comments": [
+  "reviews": [
     {
-      "id": 1,
-      "name": "Иван Иванов",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+      "user": {
+        "name": "John Doe1",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      "text": "Great store! Highly recommended."
+    },
+    {
+      "user": {
+        "name": "John Doe2",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      "text": "Great store! Highly recommended."
+    },
+    {
+      "user": {
+        "name": "John Doe3",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      "text": "Great store! Highly recommended."
+    },
+    {
+      "user": {
+        "name": "John Doe4",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      "text": "Great store! Highly recommended."
+    },
+    {
+      "user": {
+        "name": "John Doe5",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      "text": "Great store! Highly recommended."
+    },
+    {
+      "user": {
+        "name": "John Doe6",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      "text": "Great store! Highly recommended."
     }
   ]
 }

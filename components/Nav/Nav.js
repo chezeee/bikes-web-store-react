@@ -7,7 +7,7 @@ import Login from './Login-btn';
 const pages = [
   { href: '/', name: 'Главная' },
   { href: '/catalog', name: 'Каталог товаров' },
-  { href: '/sales', name: 'Акции и скидки' },
+  { href: '/reviews', name: 'Отзывы о нас' },
   { href: '/contacts', name: 'Контакты' },
 ];
 
