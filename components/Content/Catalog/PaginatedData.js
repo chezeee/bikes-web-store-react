@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 
 import css from './PaginatedData.module.css';
 
-export default function PaginatedData({ data, pageSize }) {
+export default function PaginatedData({ data, pageSize, productClick }) {
   const [currentPage, setCurrentPage] = useState(1),
     totalPages = Math.ceil(data.length / pageSize),
     startIndex = (currentPage - 1) * pageSize,
@@ -19,7 +19,7 @@ export default function PaginatedData({ data, pageSize }) {
       <div className={css['products-container']}>
         <div className="gap-2 grid grid-cols-1 md:grid-cols-3">
           {paginatedData.map((item) => {
-            return <ProductCard key={item.id} item={item} />;
+            return <ProductCard key={item.id} item={item} productClick={productClick} />;
           })}
         </div>
       </div>

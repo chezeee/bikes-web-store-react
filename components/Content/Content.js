@@ -27,24 +27,27 @@ export default function Content() {
     setCheckedBrands = (values) => setBrands(values),
     setCheckedCollections = (values) => setCollections(values),
     setSortedValue = (value) => setSortValue([...value].join(', ')),
-    sortingByValue = (prevItem, nextItem) => {
-      switch (sortValue) {
-        case 'priceMinToMax':
-          return prevItem.price - nextItem.price;
-        case 'priceMaxToMin':
-          return nextItem.price - prevItem.price;
-        case 'brand':
-          return prevItem.brand.localeCompare(nextItem.brand);
-        case 'model':
-          return prevItem.model.localeCompare(nextItem.model);
-        case 'collectionOld':
-          return prevItem.collection - nextItem.collection;
-        case 'collectionNew':
-          return nextItem.collection - prevItem.collection;
-        default:
-          break;
-      }
-    };
+    productClick = (id) => {
+      router.push(`/catalog/${id}`);
+    },
+  sortingByValue = (prevItem, nextItem) => {
+    switch (sortValue) {
+      case 'priceMinToMax':
+        return prevItem.price - nextItem.price;
+      case 'priceMaxToMin':
+        return nextItem.price - prevItem.price;
+      case 'brand':
+        return prevItem.brand.localeCompare(nextItem.brand);
+      case 'model':
+        return prevItem.model.localeCompare(nextItem.model);
+      case 'collectionOld':
+        return prevItem.collection - nextItem.collection;
+      case 'collectionNew':
+        return nextItem.collection - prevItem.collection;
+      default:
+        break;
+    }
+  };
 
   let filteredData;
 
@@ -110,6 +113,7 @@ export default function Content() {
           <Catalog
             data={filteredData.toSorted(sortingByValue)}
             setSortedValue={setSortedValue}
+            productClick={productClick}
           />
         </section>
       </div>

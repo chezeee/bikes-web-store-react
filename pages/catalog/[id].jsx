@@ -1,33 +1,31 @@
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Spinner } from '@nextui-org/react';
 import ProductDetails from '@/components/Content/Catalog/ProductDetails';
 import Nav from '@/components/Nav/Nav';
 
-// export const getStaticPaths = async () => {
-//   const res = await fetch('https://localhost:5000/products');
-//   const data = await res.json();
+export default function ProductPage() {
+  const router = useRouter(),
+    { id } = router.query,
+    [product, setProduct] = useState(null);
 
-//   const paths = data.map((item) => {
-//     return {
-//       params: { id: item.id },
-//     };
-//   });
+  useEffect(() => {
+    const getItemById = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/products/${id}`);
+        const data = await response.json();
+        setProduct(data);
+      } catch (error) {
+        console.error('Error fetching product:', error);
+      }
+    };
+    getItemById();
+  }, [id]);
 
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
+  if (!product) {
+    return <Spinner size="lg" color="primary" />;
+  }
 
-// export const getStaticProps = async (context) => {
-//   const id = context.params.id;
-//   const res = await fetch(`https://localhost:5000/products/${id}`);
-//   const data = await res.json();
-
-//   return {
-//     props: { item: data },
-//   };
-// };
-
-export default function Details() {
   return (
     <>
       <header>
@@ -35,7 +33,7 @@ export default function Details() {
       </header>
       <section className="mainContainer">
         <main>
-          <ProductDetails />
+          <ProductDetails product={product} />
         </main>
       </section>
     </>

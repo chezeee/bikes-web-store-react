@@ -1,16 +1,12 @@
 import { useContext } from 'react';
 import { Context } from '@/context/orders';
 import { Button } from '@nextui-org/react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import css from './ProductDetails.module.css';
 
-export default function ProductDetails({}) {
-  const router = useRouter(),
-    { id, type, brand, model, description, collection, price } = router.query,
-    // itemData = JSON.parse(item),
-    // { id, type, brand, model, description, collection, price } = itemData,
+export default function ProductDetails({ product }) {
+  const { id, type, brand, model, description, collection, price } = product,
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
@@ -33,8 +29,7 @@ export default function ProductDetails({}) {
         });
       } else {
         setOrders((orders) => {
-          return;
-          // return orders.concat(itemData);  // временно
+          return orders.concat(product);
         });
       }
     };

@@ -5,9 +5,8 @@ import Link from 'next/link';
 import { Button } from '@nextui-org/react';
 import css from './ProductCard.module.css';
 
-export default function ProductCard({ item }) {
+export default function ProductCard({ item, productClick }) {
   const { id, brand, model, type, collection, description, price, img } = item,
-    // itemData = JSON.stringify(item),
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
@@ -36,9 +35,9 @@ export default function ProductCard({ item }) {
       }
     };
   return (
-    <Card shadow="sm" key={id} isPressable>
+    <Card shadow="sm" key={id} isPressable onPress={() => productClick(id)}>
       <CardBody className="overflow-visible p-0">
-        <Link
+        {/* <Link
           href={{
             pathname: `/catalog/${id}`,
             query: {
@@ -51,16 +50,16 @@ export default function ProductCard({ item }) {
               price: price,
             },
           }}
-        >
-          <Image
-            shadow="sm"
-            radius="lg"
-            width="100%"
-            alt={`${type} ${brand} ${model}`}
-            className="w-full object-cover h-[220px]"
-            src={img}
-          />
-        </Link>
+        > */}
+        <Image
+          shadow="sm"
+          radius="lg"
+          width="100%"
+          alt={`${type} ${brand} ${model}`}
+          className="w-full object-cover h-[220px]"
+          src={img}
+        />
+        {/* </Link> */}
       </CardBody>
       <CardFooter className={{ footer: 'text-small justify-between' }}>
         <div className={css['descr-flex']}>
