@@ -11,11 +11,11 @@ export default function ReviewsAbout({}) {
       <header>
         <Nav />
       </header>
-      {/* <section className="mainContainer"> */}
+      <section className="mainContainer">
         <main>
           <Reviews />
         </main>
-      {/* </section> */}
+      </section>
     </>
   );
 }

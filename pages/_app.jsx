@@ -12,14 +12,14 @@ export default function MyApp({
   return (
     <SessionProvider session={session}>
       <NextUIProvider>
-        <NextThemesProvider>
+        {/* <NextThemesProvider> */}
           <OrdersProvider>
             <div className="flexWrap">
               <Component {...pageProps} />
               <footer>FOOTER</footer>
             </div>
           </OrdersProvider>
-        </NextThemesProvider>
+        {/* </NextThemesProvider> */}
       </NextUIProvider>
     </SessionProvider>
   );

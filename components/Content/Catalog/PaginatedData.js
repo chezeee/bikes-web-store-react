@@ -17,9 +17,15 @@ export default function PaginatedData({ data, pageSize, productClick }) {
   return (
     <>
       <div className={css['products-container']}>
-        <div className="gap-2 grid grid-cols-1 md:grid-cols-3">
+        <div className="gap-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {paginatedData.map((item) => {
-            return <ProductCard key={item.id} item={item} productClick={productClick} />;
+            return (
+              <ProductCard
+                key={item.id}
+                item={item}
+                productClick={productClick}
+              />
+            );
           })}
         </div>
       </div>

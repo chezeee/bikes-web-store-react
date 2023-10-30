@@ -4,13 +4,13 @@
 }
 
 .flex-wrapper p, .flex-wrapper h1, .flex-wrapper h2 {
-  color: black;
+  /* color: black; */
 }
 
 .sidebar-container {
   width: 20%;
-  border-right: 1px solid black;
-  background: rgb(29, 41, 59);
+  border-right: 6px solid rgb(192, 205, 225);
+  background: rgb(244, 246, 250);
   min-height: calc(100vh - 129px);
 }
 
