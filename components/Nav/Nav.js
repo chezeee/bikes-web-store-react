@@ -1,13 +1,12 @@
 import { memo, useContext, useState } from 'react';
-import { useSession, signOut } from 'next-auth/react';
 
 import { Context } from '@/context/orders';
+import Link from 'next/link';
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,

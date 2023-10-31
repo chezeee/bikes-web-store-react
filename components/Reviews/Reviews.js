@@ -55,7 +55,7 @@ export default function Reviews() {
     if (res.ok) {
       const newReview = await res.json();
       setReviews([...reviews, newReview]);
-      setNewReviewText('');
+      // setNewReviewText('');
     }
   };
 
