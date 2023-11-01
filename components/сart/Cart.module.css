@@ -1,0 +1,29 @@
+.cart-container{
+  margin-top: 30px;
+  color: black;
+}
+
+.cart-container a {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration:underline;
+}
+
+.itemCards{
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.itemCards ol {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.itemCards ol li {
+  margin-bottom: 1em;
+}
+
+.totalPrice{
+  text-align: center;
+  padding-bottom: 20px;
+}
