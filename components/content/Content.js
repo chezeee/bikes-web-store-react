@@ -1,4 +1,4 @@
-import Catalog from './сatalog/Catalog';
+import Catalog from './catalog/Catalog';
 import Sidebar from './sidebar/Sidebar';
 import { localData } from '@/context/products';
 import { useRouter } from 'next/router';

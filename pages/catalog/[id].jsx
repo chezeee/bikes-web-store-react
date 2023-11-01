@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Spinner } from '@nextui-org/react';
-import ProductDetails from '@/components/Content/сatalog/ProductDetails';
+import ProductDetails from '@/components/content/catalog/ProductDetails';
 import Nav from '@/components/nav/Nav';
 
 export default function ProductPage() {
