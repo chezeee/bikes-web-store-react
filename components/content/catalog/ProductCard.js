@@ -37,11 +37,13 @@ export default function ProductCard({ item, productClick }) {
     <Card shadow="sm" key={id} isPressable onPress={() => productClick(id)}>
       <CardBody className="overflow-visible p-0">
         <Image
-          shadow="sm"
+          shadow="lg"
           radius="lg"
           width="100%"
+          isZoomed={true}
+          isBlurred={true}
           alt={`${type} ${brand} ${model}`}
-          className="w-full object-cover h-[200px]"
+          className="w-full object-cover md:h-[200px] lg:h-[220px]"
           src={img}
         />
       </CardBody>
@@ -58,7 +60,13 @@ export default function ProductCard({ item, productClick }) {
           <div className={css['card-price']}>
             <h2>{price} ₽</h2>
           </div>
-          <Button size="md" color="default" onClick={addToCart}>
+          <Button
+            size="md"
+            variant="ghost"
+            color="primary"
+            className="shadow-lg"
+            onClick={addToCart}
+          >
             Добавить в корзину
           </Button>
         </div>
