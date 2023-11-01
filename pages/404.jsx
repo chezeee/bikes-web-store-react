@@ -1,4 +1,4 @@
-import NotFoundPage from '@/components/Layouts/NotFoundPage';
+import NotFoundPage from '@/components/layouts/NotFoundPage';
 
 export default function NotFoundPage404() {
   return (

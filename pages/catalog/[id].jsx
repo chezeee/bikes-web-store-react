@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Spinner } from '@nextui-org/react';
-import ProductDetails from '@/components/Content/Catalog/ProductDetails';
-import Nav from '@/components/Nav/Nav';
+import ProductDetails from '@/components/Content/сatalog/ProductDetails';
+import Nav from '@/components/nav/Nav';
 
 export default function ProductPage() {
   const router = useRouter(),

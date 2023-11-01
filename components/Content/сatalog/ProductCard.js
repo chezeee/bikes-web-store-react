@@ -1,7 +1,6 @@
 import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import { useContext } from 'react';
 import { Context } from '@/context/orders';
-import Link from 'next/link';
 import { Button } from '@nextui-org/react';
 import css from './ProductCard.module.css';
 
@@ -37,20 +36,6 @@ export default function ProductCard({ item, productClick }) {
   return (
     <Card shadow="sm" key={id} isPressable onPress={() => productClick(id)}>
       <CardBody className="overflow-visible p-0">
-        {/* <Link
-          href={{
-            pathname: `/catalog/${id}`,
-            query: {
-              id: id,
-              brand: brand,
-              model: model,
-              type: type,
-              description: description,
-              collection: collection,
-              price: price,
-            },
-          }}
-        > */}
         <Image
           shadow="sm"
           radius="lg"
@@ -59,7 +44,6 @@ export default function ProductCard({ item, productClick }) {
           className="w-full object-cover h-[220px]"
           src={img}
         />
-        {/* </Link> */}
       </CardBody>
       <CardFooter className={{ footer: 'text-small justify-between' }}>
         <div className={css['descr-flex']}>

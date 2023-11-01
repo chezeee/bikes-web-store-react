@@ -1,11 +1,25 @@
 import { useState, useEffect } from 'react';
 import { useSession, signIn } from 'next-auth/react';
-import { Button, Spinner } from '@nextui-org/react';
+import { Button, Spinner, Textarea, User } from '@nextui-org/react';
+import css from './Reviews.module.css';
+import { nanoid } from 'nanoid';
+import { Pagination } from '@nextui-org/react';
+import ReviewSubmit from './ReviewSubmit';
 
-export default function Reviews() {
+export default function Reviews({ pageSize }) {
   const { data: session, status } = useSession(),
     [reviews, setReviews] = useState([]),
-    [newReviewText, setNewReviewText] = useState('');
+    [newReviewText, setNewReviewText] = useState(''),
+    [animate, setAnimate] = useState(false),
+    setNewReview = (text) => setNewReviewText(text),
+    [currentPage, setCurrentPage] = useState(1),
+    totalPages = Math.ceil(reviews.length / pageSize),
+    startIndex = (currentPage - 1) * pageSize,
+    endIndex = startIndex + pageSize,
+    paginatedData = reviews.slice(startIndex, endIndex),
+    onChange = (page) => {
+      setCurrentPage(page);
+    };
 
   useEffect(() => {
     const getReviews = async () => {
@@ -18,6 +32,7 @@ export default function Reviews() {
       }
     };
     getReviews();
+    setAnimate(true);
   }, []);
 
   if (!reviews) {
@@ -41,6 +56,7 @@ export default function Reviews() {
     const res = await fetch(`http://localhost:5000/reviews`, {
       method: 'POST',
       body: JSON.stringify({
+        id: nanoid(),
         user: {
           name: session.user.name,
           avatar: session.user.image,
@@ -55,50 +71,57 @@ export default function Reviews() {
     if (res.ok) {
       const newReview = await res.json();
       setReviews([...reviews, newReview]);
-      // setNewReviewText('');
+      setNewReviewText('');
     }
   };
 
   if (status === 'loading') {
-    return <p>Loading...</p>;
+    return <Spinner size="lg" color="primary" />;
   }
 
-  if (session) {
-    return (
-      <div>
-        <h1>Отзывы о нас</h1>
-
-        {reviews.map((review, index) => (
-          <div key={index}>
-            <img src={review.user.avatar} alt={review.user.name} />
-            <p>{review.text}</p>
-          </div>
-        ))}
-
-        <form onSubmit={handleNewReviewSubmit}>
-          <textarea
-            value={newReviewText}
-            onChange={(evt) => setNewReviewText(evt.target.value)}
-          />
-          <button type="submit">Submit Review</button>
-        </form>
-      </div>
-    );
-  }
   return (
     <div>
-      <h1>Отзывы о нас</h1>
-
-      {reviews.map((review, index) => (
-        <div key={index}>
-          <img src={review.user.avatar} alt={review.user.name} />
-          <p>{review.text}</p>
-        </div>
-      ))}
-      <div>
-        <p>You need to sign in to leave a review.</p>
-        <Button onClick={() => signIn()}>Sign in</Button>
+      <h1>Отзывы о BikesWebStore</h1>
+      <div className={css['reviewsContainer']}>
+        {paginatedData.map((review, index) => (
+          <div
+            key={index}
+            className={`${css.review} ${
+              index % 2 === 0 ? css.left : css.right
+            }`}
+          >
+            <div
+              className={`${css.reviewContent} ${animate ? css.animate : ''}`}
+            >
+              <User
+                name={review.user.name}
+                avatarProps={{ src: review.user.avatar }}
+              />
+              <p>{review.text}</p>
+            </div>
+          </div>
+        ))}
+        <Pagination
+          total={totalPages}
+          initialPage={currentPage}
+          onChange={onChange}
+        />
       </div>
+      {session ? (
+        <ReviewSubmit
+          handleNewReviewSubmit={handleNewReviewSubmit}
+          newReview={newReviewText}
+          setNewReview={setNewReview}
+        />
+      ) : (
+        <div>
+          <p>
+            Авторизуйтесь, чтобы у Вас появилась возможность оставить свой отзыв
+            о нас.
+          </p>
+          <Button onClick={() => signIn()}>Войти</Button>
+        </div>
+      )}
     </div>
   );
 }

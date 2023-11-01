@@ -1,5 +1,5 @@
-import Catalog from './Catalog/Catalog';
-import Sidebar from './Sidebar/Sidebar';
+import Catalog from './сatalog/Catalog';
+import Sidebar from './sidebar/Sidebar';
 import { localData } from '@/context/products';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
@@ -30,24 +30,24 @@ export default function Content() {
     productClick = (id) => {
       router.push(`/catalog/${id}`);
     },
-  sortingByValue = (prevItem, nextItem) => {
-    switch (sortValue) {
-      case 'priceMinToMax':
-        return prevItem.price - nextItem.price;
-      case 'priceMaxToMin':
-        return nextItem.price - prevItem.price;
-      case 'brand':
-        return prevItem.brand.localeCompare(nextItem.brand);
-      case 'model':
-        return prevItem.model.localeCompare(nextItem.model);
-      case 'collectionOld':
-        return prevItem.collection - nextItem.collection;
-      case 'collectionNew':
-        return nextItem.collection - prevItem.collection;
-      default:
-        break;
-    }
-  };
+    sortingByValue = (prevItem, nextItem) => {
+      switch (sortValue) {
+        case 'priceMinToMax':
+          return prevItem.price - nextItem.price;
+        case 'priceMaxToMin':
+          return nextItem.price - prevItem.price;
+        case 'brand':
+          return prevItem.brand.localeCompare(nextItem.brand);
+        case 'model':
+          return prevItem.model.localeCompare(nextItem.model);
+        case 'collectionOld':
+          return prevItem.collection - nextItem.collection;
+        case 'collectionNew':
+          return nextItem.collection - prevItem.collection;
+        default:
+          break;
+      }
+    };
 
   let filteredData;
 
@@ -82,16 +82,6 @@ export default function Content() {
           )
         : localData;
   }
-
-  // console.log('router=', router);
-  // console.log('brand=', brand);
-  // console.log('filteredData=', filteredData);
-
-  // console.log('Catalog',{data,error, isLoading});
-
-  // if (error) {
-  //   return <>{error.message}</>;
-  // }
 
   if (isLoading) return <Spinner size="lg" color="primary" />;
 

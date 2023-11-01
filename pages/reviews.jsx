@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Nav from '@/components/Nav/Nav';
-import Reviews from '@/components/Reviews/Reviews';
+import Nav from '@/components/nav/Nav';
+import Reviews from '@/components/reviews/Reviews';
 
 export default function ReviewsAbout({}) {
   return (
@@ -13,7 +13,7 @@ export default function ReviewsAbout({}) {
       </header>
       <section className="mainContainer">
         <main>
-          <Reviews />
+          <Reviews pageSize={6} />
         </main>
       </section>
     </>

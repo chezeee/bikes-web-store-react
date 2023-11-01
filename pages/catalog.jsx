@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Nav from '@/components/Nav/Nav';
-import Content from '@/components/Content/Content';
+import Nav from '@/components/nav/Nav';
+import Content from '@/components/content/Content';
 
 export default function ItemsCatalog({}) {
   return (

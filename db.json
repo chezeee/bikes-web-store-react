@@ -267,6 +267,38 @@
         "avatar": "https://example.com/avatar.jpg"
       },
       "text": "Great store! Highly recommended."
+    },
+    {
+      "id": 0.32747621632684565,
+      "user": {
+        "name": "Ilya Yalymov",
+        "avatar": "https://avatars.githubusercontent.com/u/99075993?v=4"
+      },
+      "text": "dfsdgsdgsdg"
+    },
+    {
+      "id": 0.04442857384756049,
+      "user": {
+        "name": "Ilya Yalymov",
+        "avatar": "https://avatars.githubusercontent.com/u/99075993?v=4"
+      },
+      "text": "dfsdgsdgsdg"
+    },
+    {
+      "id": 0.7521518580571811,
+      "user": {
+        "name": "Ilya Yalymov",
+        "avatar": "https://avatars.githubusercontent.com/u/99075993?v=4"
+      },
+      "text": "Отличный магазин! "
+    },
+    {
+      "id": 0.7311638972927976,
+      "user": {
+        "name": "Ilya Yalymov",
+        "avatar": "https://avatars.githubusercontent.com/u/99075993?v=4"
+      },
+      "text": "fsdgsdgsdgsdg"
     }
   ]
 }

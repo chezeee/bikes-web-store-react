@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import css from './CartItem.module.css';
-import Count from '@/components/Count/Count';
+import Count from '@/components/count/Count';
 import { Button } from '@nextui-org/react';
 
 export default function CartItem({
