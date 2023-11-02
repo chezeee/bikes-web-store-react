@@ -67,9 +67,8 @@ export default memo(function Nav({}) {
           href={'/cart'}
           className={css['navLink']}
           aria-current="page"
-          passHref
         >
-          <NavbarItem isActive={router.pathname === '/cart'}>
+          <NavbarItem>
             <div className={css.cart_wrapper}>
               <span className={css[`${countCartClass}`]}>{counter}</span>
 

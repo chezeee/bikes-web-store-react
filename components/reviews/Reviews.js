@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSession, signIn } from 'next-auth/react';
-import { Button, Spinner, Textarea, User } from '@nextui-org/react';
+import { Button, Spinner, User } from '@nextui-org/react';
 import css from './Reviews.module.css';
 import { nanoid } from 'nanoid';
 import { Pagination } from '@nextui-org/react';

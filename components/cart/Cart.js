@@ -4,9 +4,11 @@ import CartItem from './CartItem';
 import Link from 'next/link';
 import css from './Cart.module.css';
 import { Button } from '@nextui-org/react';
+import { useRouter } from 'next/router';
 
 export default function Cart() {
   const [orders, setOrders] = useContext(Context),
+    router = useRouter(),
     deleteItem = (id) => {
       setOrders((orders) => orders.filter((item) => item.id !== id));
     },
@@ -30,26 +32,25 @@ export default function Cart() {
           deleteItem(id);
           return;
         }
-      });
-      // Уменьшение количества товара
-      setOrders((orders) => {
-        return orders.map((product) => {
-          if (product.id === id) {
-            return {
-              ...product,
-              count: Number(product.count) - 1,
-              totalPrice: product.price * (Number(product.count) - 1),
-            };
-          }
-          return product;
+      }),
+        // Уменьшение количества товара
+        setOrders((orders) => {
+          return orders.map((product) => {
+            if (product.id === id) {
+              return {
+                ...product,
+                count: Number(product.count) - 1,
+                totalPrice: product.price * (Number(product.count) - 1),
+              };
+            }
+            return product;
+          });
         });
-      });
-    };
-
-  const totalPrice = orders.reduce(
-    (total, product) => total + Number(product.totalPrice),
-    0
-  );
+    },
+    totalPrice = orders.reduce(
+      (total, product) => total + Number(product.totalPrice),
+      0
+    );
 
   return (
     <div className={css['cart-container']}>
@@ -70,7 +71,9 @@ export default function Cart() {
           <div className={css.totalPrice}>
             {'Выбрано товаров на общую сумму: '}
             <b>{`${totalPrice} ₽`}</b>
-            <Button color="primary">Оформить заказ</Button>
+            <Button color="primary" onClick={() => router.push('/order')}>
+              Продолжить оформление заказа
+            </Button>
           </div>
         </div>
       )) || <div>Корзина пуста!</div>}

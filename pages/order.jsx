@@ -1,19 +1,19 @@
 import Head from 'next/head';
 import Nav from '@/components/nav/Nav';
-import Cart from '@/components/cart/Cart';
+import Order from '@/components/order/Order';
 
-export default function productsToCart({}) {
+export default function MakeAnOrder({}) {
   return (
     <>
       <Head>
-        <title>BikeShop: Корзина</title>
+        <title>BikeShop: Оформление заказа</title>
       </Head>
       <header>
         <Nav />
       </header>
       <section className="mainContainer">
         <main>
-          <Cart />
+          <Order />
         </main>
       </section>
     </>
