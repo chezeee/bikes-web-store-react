@@ -80,8 +80,10 @@ export default function Reviews({ pageSize }) {
   }
 
   return (
-    <div>
-      <h1>Отзывы о BikesWebStore</h1>
+    <div className={css['main-content']}>
+      <h1>
+        <b>Отзывы о BikesWebStore</b>
+      </h1>
       <div className={css['reviewsContainer']}>
         {paginatedData.map((review, index) => (
           <div
@@ -93,10 +95,12 @@ export default function Reviews({ pageSize }) {
             <div
               className={`${css.reviewContent} ${animate ? css.animate : ''}`}
             >
-              <User
-                name={review.user.name}
-                avatarProps={{ src: review.user.avatar }}
-              />
+              <b>
+                <User
+                  name={review.user.name}
+                  avatarProps={{ src: review.user.avatar }}
+                />
+              </b>
               <p>{review.text}</p>
             </div>
           </div>

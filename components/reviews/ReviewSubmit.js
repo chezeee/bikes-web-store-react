@@ -1,4 +1,5 @@
 import { Button, Textarea } from '@nextui-org/react';
+import css from './ReviewSubmit.module.css';
 
 export default function ReviewSubmit({
   handleNewReviewSubmit,
@@ -6,7 +7,7 @@ export default function ReviewSubmit({
   newReview,
 }) {
   return (
-    <form onSubmit={handleNewReviewSubmit}>
+    <form onSubmit={handleNewReviewSubmit} className={css['submit-form']}>
       <Textarea
         variant="bordered"
         label="Нам очень важно Ваше мнение о нас. Пожалуйста, оставьте отзыв о нашем магазине."
