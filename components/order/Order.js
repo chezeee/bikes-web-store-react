@@ -75,6 +75,9 @@ export default function Order({}) {
   if (status === 'loading') {
     return <Spinner size="lg" color="primary" />;
   }
+
+  console.log('session:', session);
+
   return (
     <form onSubmit={handleSubmit}>
       <Input
