@@ -5,9 +5,15 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import css from './ProductDetails.module.css';
 
+const fetcher = (...args) =>
+  fetch(...args).then((res) => {
+    return res.json();
+  });
+
 export default function ProductDetails({ product }) {
   const { id, type, brand, model, description, collection, price } = product,
     router = useRouter(),
+    
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
