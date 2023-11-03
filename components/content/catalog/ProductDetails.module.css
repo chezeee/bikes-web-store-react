@@ -6,5 +6,32 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  margin: 20px auto;
+}
+
+.img-wrapper img {
+  max-width: 1000px;
+}
+
+.details-content {
   margin: 0 auto;
+  max-width: 900px ;
+  display: flex;
+  border: 2px solid rgb(232, 232, 232);
+  border-radius: 20px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  gap: 5px;
+}
+
+.buttons-wrapper {
+  
+  margin: 20px auto;
+  display: flex;
+  max-width: 856px;
+  flex-direction: column-reverse;
+  gap: 10px;
+  
 }

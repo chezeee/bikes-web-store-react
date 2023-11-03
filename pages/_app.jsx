@@ -1,9 +1,10 @@
 import { OrdersProvider } from '@/context/orders';
 import { SessionProvider } from 'next-auth/react';
-import '@/styles/globals.css';
+import Footer from '@/components/layouts/Footer';
 import { NextUIProvider } from '@nextui-org/react';
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
+// import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { fontSans, fontMono } from '../config/fonts';
+import '@/styles/globals.css';
 
 export default function MyApp({
   Component,
@@ -12,14 +13,18 @@ export default function MyApp({
   return (
     <SessionProvider session={session}>
       <NextUIProvider>
-        {/* <NextThemesProvider> */}
-          <OrdersProvider>
-            <div className="flexWrap">
+        {/* <NextThemesProvider>*/}
+        <OrdersProvider>
+          <div className="flexWrap">
+            <div>
               <Component {...pageProps} />
-              <footer>FOOTER</footer>
             </div>
-          </OrdersProvider>
-        {/* </NextThemesProvider> */}
+            <footer>
+              <Footer />
+            </footer>
+          </div>
+        </OrdersProvider>
+        {/* </NextThemesProvider>*/}
       </NextUIProvider>
     </SessionProvider>
   );

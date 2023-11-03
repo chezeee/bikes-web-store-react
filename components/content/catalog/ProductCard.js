@@ -43,7 +43,7 @@ export default function ProductCard({ item, productClick }) {
           isZoomed={true}
           isBlurred={true}
           alt={`${type} ${brand} ${model}`}
-          className="w-full object-cover md:h-[200px] lg:h-[220px]"
+          className="w-full object-cover md:h-[200px] lg:h-[175px]"
           src={img}
         />
       </CardBody>

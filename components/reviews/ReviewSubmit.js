@@ -17,7 +17,9 @@ export default function ReviewSubmit({
         value={newReview}
         onChange={(evt) => setNewReview(evt.target.value)}
       />
-      <Button type="submit">Отправить</Button>
+      <Button type="submit" color="primary">
+        Отправить
+      </Button>
     </form>
   );
 }

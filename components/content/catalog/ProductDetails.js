@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { Context } from '@/context/orders';
 import { Button } from '@nextui-org/react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import css from './ProductDetails.module.css';
 
 export default function ProductDetails({ product }) {
   const { id, type, brand, model, description, collection, price } = product,
+    router = useRouter(),
     [orders, setOrders] = useContext(Context),
     addToCart = () => {
       let isInArray = false;
@@ -43,20 +44,40 @@ export default function ProductDetails({ product }) {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: '45%', height: 'auto' }}
+          style={{ width: '100%', height: 'auto' }}
         />
       </div>
-      <div>Тип: {type}</div>
-      <div>Бренд: {brand}</div>
-      <div>Модель: {model}</div>
-      <div>Коллекция: {collection} г.</div>
-      <div>Описание: {description}</div>
-      <div>Цена: {price} ₽</div>
-      <Button color="primary" onClick={addToCart}>
-        Добавить в корзину
-      </Button>
-      <div>
-        <Link href={'/catalog'}>Вернуться в каталог</Link>
+      <div className={css['details-content']}>
+        <div>
+          <b>Тип:</b> {type}
+        </div>
+        <div>
+          <b>Бренд:</b> {brand}
+        </div>
+        <div>
+          <b>Модель:</b> {model}
+        </div>
+        <div>
+          <b>Коллекция:</b> {collection} г.
+        </div>
+        <div>
+          <b>Описание:</b> {description}
+        </div>
+        <div>
+          <b>Цена:</b> {price} ₽
+        </div>
+      </div>
+      <div className={css['buttons-wrapper']}>
+        <Button
+          color="primary"
+          variant="faded"
+          onClick={() => router.push('/catalog')}
+        >
+          Назад
+        </Button>
+        <Button color="primary" variant="ghost" onClick={addToCart}>
+          Добавить в корзину
+        </Button>
       </div>
     </div>
   );

@@ -81,9 +81,7 @@ export default function Reviews({ pageSize }) {
 
   return (
     <div className={css['main-content']}>
-      <h1>
-        <b>Отзывы о BikesWebStore</b>
-      </h1>
+      <h2>Отзывы о BikesWebStore</h2>
       <div className={css['reviewsContainer']}>
         {paginatedData.map((review, index) => (
           <div
@@ -105,11 +103,14 @@ export default function Reviews({ pageSize }) {
             </div>
           </div>
         ))}
-        <Pagination
-          total={totalPages}
-          initialPage={currentPage}
-          onChange={onChange}
-        />
+        {totalPages > 1 && (
+          <Pagination
+            total={totalPages}
+            initialPage={currentPage}
+            onChange={onChange}
+            className={css.pagination}
+          />
+        )}
       </div>
       {session ? (
         <ReviewSubmit
@@ -118,7 +119,7 @@ export default function Reviews({ pageSize }) {
           setNewReview={setNewReview}
         />
       ) : (
-        <div>
+        <div className={css['reviews-login']}>
           <p>
             Авторизуйтесь, чтобы у Вас появилась возможность оставить свой отзыв
             о нас.

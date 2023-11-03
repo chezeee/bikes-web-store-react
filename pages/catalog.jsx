@@ -6,7 +6,7 @@ export default function ItemsCatalog({}) {
   return (
     <>
       <Head>
-        <title>BikeShop: Каталог</title>
+        <title>Bikes Web Store: Каталог</title>
       </Head>
       <header>
         <Nav />

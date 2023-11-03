@@ -1,8 +1,85 @@
-.home {
-  color: black;
+.home button {
+  margin: 1vw 0;
+  color: white;
+  border-color: #bd0f0f;
 }
 
-.home h1 {
-  font-weight: 700;
-  font-size: 24px;
+.home-block1 {
+  margin-top: -17vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vw;
+  max-height: 1000px;
+  background-image: url('/images/bg/block1.png');
+}
+
+.home-block1 h2 {
+  font-weight: 600;
+}
+
+.home-block2 h2, .home-block3 h2, .home-block4 h2 {
+  font-weight: 400;
+}
+
+.home-block1 h2, .home-block2 h2, .home-block3 h2, .home-block4 h2 {
+  color: rgb(180, 18, 18);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: calc(100% + 1vw);
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.2vw;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+
+.block1-content{
+  position: absolute;
+  margin-top: 58%;
+  margin-left: 55%; 
+}
+.home-block2 {
+  position: relative;
+  
+}
+
+.block2-bg {
+  background-image: url('/images/bg/sphynx.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 10vw;
+  height: 60vw;
+  max-height: 600px;
+  width: 45vw;
+}
+
+.block2-img, .block3-img, .block4-img {
+  width: 800px;
+  height: auto;
+}
+
+.block2-content, .block3-content, .block4-content {
+  margin: 0 auto;
+  max-width: 1160px ;
+  padding: calc(20px + 1vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .block1-content {
+    margin-top: 55%;
+    margin-left: 45%; 
+  }
+}
+
+@media (max-width: 450px) {
+  .block1-content {
+    margin-top: 55%;
+    margin-left: 37%; 
+  }
 }

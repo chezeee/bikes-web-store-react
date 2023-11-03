@@ -5,6 +5,8 @@ import Link from 'next/link';
 import css from './Cart.module.css';
 import { Button } from '@nextui-org/react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import bikeFromCart from '@/public/images/bg/bikeFromCart.png';
 
 export default function Cart() {
   const [orders, setOrders] = useContext(Context),
@@ -71,13 +73,33 @@ export default function Cart() {
           <div className={css.totalPrice}>
             {'Выбрано товаров на общую сумму: '}
             <b>{`${totalPrice} ₽`}</b>
-            <Button color="primary" onClick={() => router.push('/order')}>
-              Продолжить оформление заказа
+            <Button
+              color="primary"
+              onClick={() => router.push('/order')}
+              className={css['order-btn']}
+            >
+              Перейти к оформлению
             </Button>
           </div>
         </div>
-      )) || <div>Корзина пуста!</div>}
-      <Link href={'/catalog'}>Продолжить покупки</Link>
+      )) || (
+        <div>
+          <b>Корзина пуста!</b>
+        </div>
+      )}
+      <Button
+        onClick={() => router.push('/catalog')}
+        variant="faded"
+        color="primary"
+        className={css['catalog-btn']}
+      >
+        Перейти в каталог
+      </Button>
+      <Image
+        src={bikeFromCart}
+        alt="Bicycle from cart"
+        className={css['cart-img']}
+      ></Image>
     </div>
   );
 }

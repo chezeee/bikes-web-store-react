@@ -5,6 +5,8 @@ import { Button, Input, Spinner } from '@nextui-org/react';
 import { useRouter } from 'next/router';
 import { nanoid } from 'nanoid';
 
+import css from './Order.module.css';
+
 export default function Order({}) {
   const [orders, setOrders] = useContext(Context),
     { data: session, status } = useSession(),
@@ -79,34 +81,41 @@ export default function Order({}) {
   console.log('session:', session);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Input
-        type="text"
-        label="Имя"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        isRequired
-      />
-      <Input
-        type="email"
-        label="Электронная почта"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        isRequired
-      />
-      <Input
-        type="text"
-        label="Адрес"
-        value={address}
-        onChange={(e) => setAddress(e.target.value)}
-        isRequired
-      />
-      <div>
-        В Вашей корзине сейчас товаров: <b>{totalCount} шт.</b> общей стоимостью{' '}
-        <b>{totalPrice} ₽</b>
-      </div>
-      <Button onClick={() => router.push('/cart')}>Назад</Button>
-      <Button type="submit">Оформить заказ</Button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit} className={css.form}>
+        <label>
+          <b>Оформление заказа</b>
+        </label>
+        <Input
+          type="text"
+          label="Имя"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          isRequired
+        />
+        <Input
+          type="email"
+          label="Электронная почта"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          isRequired
+        />
+        <Input
+          type="text"
+          label="Адрес"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          isRequired
+        />
+        <div>
+          В Вашей корзине сейчас товаров: <b>{totalCount} шт.</b> общей
+          стоимостью <b>{totalPrice} ₽</b>
+        </div>
+        <Button onClick={() => router.push('/cart')}>Назад</Button>
+        <Button color="primary" type="submit">
+          Оформить заказ
+        </Button>
+      </form>
+    </>
   );
 }

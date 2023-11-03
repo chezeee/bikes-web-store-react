@@ -6,7 +6,7 @@ export default function productsToCart({}) {
   return (
     <>
       <Head>
-        <title>BikeShop: Корзина</title>
+        <title>Bikes Web Store: Корзина</title>
       </Head>
       <header>
         <Nav />

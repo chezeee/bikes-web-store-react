@@ -6,7 +6,7 @@ export default function ReviewsAbout({}) {
   return (
     <>
       <Head>
-        <title>BikeShop: Отзывы о нас</title>
+        <title>Bikes Web Store: Отзывы о нас</title>
       </Head>
       <header>
         <Nav />

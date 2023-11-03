@@ -9,7 +9,7 @@ export default function NotFoundPage() {
   useEffect(() => {
     setTimeout(() => {
       router.push('/');
-    }, 2000);
+    }, 3000);
   }, [router]);
 
   return (
@@ -21,7 +21,7 @@ export default function NotFoundPage() {
         <Link href="/">
           <b>главную страницу</b>
         </Link>{' '}
-        через пару секунд
+        через 3 секунды
       </p>
     </div>
   );

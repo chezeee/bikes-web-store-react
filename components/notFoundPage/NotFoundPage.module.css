@@ -3,9 +3,16 @@
   padding: 4vh 0;
   border-top: 1px solid rgb(92, 92, 92);
   border-bottom: 1px solid rgb(92, 92, 92);
+  color: rgb(24, 24, 24);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+
 }
 
-.notFoundPage p, .notFoundPage h1, .notFoundPage h2 {
-  font-size: 20px;
-  color: rgb(24, 24, 24);
+.notFoundPage h1{
+font-size: 24px;
+font-weight: 700;
+  
 }

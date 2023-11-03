@@ -9,7 +9,7 @@ export default function CartItem({
   increaseCount,
   dicreaseCount,
 }) {
-  const { id, brand, model, count } = item;
+  const { id, brand, model, count, totalPrice } = item;
   return (
     <div className={css['cartItem']}>
       <div className={css['card-flexWrap']}>
@@ -26,6 +26,9 @@ export default function CartItem({
         <div className={css['cartItem-descr']}>
           <h3>{`${brand} ${model}`}</h3>
           <div>Бренд: {brand}</div>
+        </div>
+        <div style={{minWidth:'100px'}}>
+          <b>{totalPrice} ₽</b>
         </div>
         <Count
           id={id}

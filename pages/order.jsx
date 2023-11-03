@@ -6,7 +6,7 @@ export default function MakeAnOrder({}) {
   return (
     <>
       <Head>
-        <title>BikeShop: Оформление заказа</title>
+        <title>Bikes Web Store: Оформление заказа</title>
       </Head>
       <header>
         <Nav />

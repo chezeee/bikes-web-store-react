@@ -29,10 +29,13 @@ import wtp from '@/public/images/brands/wtp_logo.jpg';
 export default function SwiperBrands() {
   return (
     <div className={css['swiper-container']}>
+      <h2>
+        <span style={{ color: '#FFF' }}>Большой выбор известных</span> брендов.
+      </h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay, FreeMode]}
         spaceBetween={20}
-        slidesPerView={2}
+        slidesPerView={3}
         autoplay={{
           delay: 1,
           disableOnInteraction: false,

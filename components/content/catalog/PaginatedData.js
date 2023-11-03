@@ -31,11 +31,14 @@ export default function PaginatedData({
           );
         })}
       </div>
-      <Pagination
-        total={totalPages}
-        initialPage={currentPage}
-        onChange={onChange}
-      />
+      {totalPages > 1 && (
+        <Pagination
+          className={css.pagination}
+          total={totalPages}
+          initialPage={currentPage}
+          onChange={onChange}
+        />
+      )}
     </div>
   );
 }

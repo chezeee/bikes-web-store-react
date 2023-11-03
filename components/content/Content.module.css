@@ -3,14 +3,10 @@
   flex-wrap: nowrap;
 }
 
-.flex-wrapper p, .flex-wrapper h1, .flex-wrapper h2 {
-  /* color: black; */
-}
-
 .sidebar-container {
   width: 20%;
-  border-right: 6px solid rgb(192, 205, 225);
-  background: rgb(244, 246, 250);
+  border-right: 6px solid rgba(134, 22, 22, 0.553);
+  background: rgb(250, 244, 244);
   min-height: calc(100vh - 129px);
 }
 

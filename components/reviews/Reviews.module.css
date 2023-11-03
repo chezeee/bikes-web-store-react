@@ -1,13 +1,18 @@
-.main-content {
-  padding: 2vw 0;
+.main-content h2 {
+  padding: 25px 0;
+  color: #191919;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: calc(1em + 0.5vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-
 .reviewsContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2vw;
+  padding: 25px;
 }
 
 .review {
@@ -16,12 +21,12 @@
 }
 
 .reviewContent{
-  background-color: rgb(240, 242, 248);
+  background-color: rgb(249, 236, 236);
   opacity : 0;
   width: 65%;
   margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ababab;
+  padding: 10px 10px;
+  border: 1px solid #cbcbcb;
   border-radius: 30px;
   transition: opacity 1s ease-in-out;
 }
@@ -49,3 +54,10 @@
   justify-content: end;
 }
 
+.pagination {
+  margin: 0 auto;
+}
+
+.reviews-login {
+  padding: 25px 0;
+}

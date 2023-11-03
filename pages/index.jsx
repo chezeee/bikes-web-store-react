@@ -6,16 +6,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>BikeShop</title>
+        <title>Bikes Web Store</title>
       </Head>
       <header>
         <Nav />
       </header>
-      <section className="mainContainer">
         <main>
           <HomePage />
         </main>
-      </section>
     </>
   );
 }
