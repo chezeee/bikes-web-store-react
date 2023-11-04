@@ -56,6 +56,7 @@ export default function Cart() {
 
   return (
     <div className={css['cart-container']}>
+      <h2>Корзина товаров</h2>
       {(orders.length && (
         <div className={css['itemCards']}>
           <ol>
@@ -84,7 +85,7 @@ export default function Cart() {
         </div>
       )) || (
         <div className={css.emptyCart}>
-          <b>Корзина пуста!</b>
+          Корзина пуста!
         </div>
       )}
       <Button

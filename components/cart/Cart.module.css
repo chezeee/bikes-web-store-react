@@ -1,12 +1,21 @@
 .cart-container{
   padding: 30px;
-  
 }
 
 .cart-container a {
   font-weight: 500;
   font-size: 20px;
   text-decoration:underline;
+}
+
+.cart-container h2 {
+  padding-bottom: 25px;
+  color: #191919;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .itemCards{
@@ -40,5 +49,5 @@
 }
 
 .emptyCart {
-  font-size: 24px;
+  font-size: 16px;
 }

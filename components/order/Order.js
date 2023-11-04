@@ -91,70 +91,70 @@ export default function Order({}) {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={css.form}>
-        <label>
-          <b>Оформление заказа</b>
-        </label>
-        <Input
-          type="text"
-          label="Имя"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          isRequired
-        />
-        <Input
-          type="email"
-          label="Электронная почта"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          isRequired
-        />
-        <Input
-          type="text"
-          label="Адрес"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          isRequired
-        />
-        <div>
-          В Вашей корзине сейчас товаров: <b>{totalCount} шт.</b> общей
-          стоимостью <b>{totalPrice} ₽</b>
-        </div>
-        <Button onClick={() => router.push('/cart')}>Назад</Button>
-        <Button color="primary" type="submit">
-          Оформить заказ
-        </Button>
-      </form>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">
-                Спасибо за Вашу покупку!
-              </ModalHeader>
-              <ModalBody>
-                <p>Ваш заказ уже у нас!</p>
-                <p>Мы уже начали его обрабатывать.</p>
-                <p>
-                  Курьер в скором времени свяжется с Вами, чтобы согласовать
-                  доставку.
-                </p>
-              </ModalBody>
-              <ModalFooter>
-                <Button
-                  color="danger"
-                  variant="light"
-                  onPress={() => {
-                    router.push('/catalog');
-                  }}
-                >
-                  Close
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
+      <div className={css['form-container']}>
+        <h2 className="">Оформление заказа</h2>
+        <form onSubmit={handleSubmit} className={css.form}>
+          <Input
+            type="text"
+            label="Имя"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            isRequired
+          />
+          <Input
+            type="email"
+            label="Электронная почта"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            isRequired
+          />
+          <Input
+            type="text"
+            label="Адрес"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            isRequired
+          />
+          <div>
+            В Вашей корзине сейчас товаров: <b>{totalCount} шт.</b> общей
+            стоимостью <b>{totalPrice} ₽</b>
+          </div>
+          <Button onClick={() => router.push('/cart')}>Назад</Button>
+          <Button color="primary" type="submit">
+            Оформить заказ
+          </Button>
+        </form>
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+          <ModalContent>
+            {(onClose) => (
+              <>
+                <ModalHeader className="flex flex-col gap-1">
+                  Спасибо за Вашу покупку!
+                </ModalHeader>
+                <ModalBody>
+                  <p>Ваш заказ уже у нас!</p>
+                  <p>Мы уже начали его обрабатывать.</p>
+                  <p>
+                    Курьер в скором времени свяжется с Вами, чтобы согласовать
+                    доставку.
+                  </p>
+                </ModalBody>
+                <ModalFooter>
+                  <Button
+                    color="danger"
+                    variant="light"
+                    onPress={() => {
+                      router.push('/catalog');
+                    }}
+                  >
+                    Close
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
+      </div>
     </>
   );
 }

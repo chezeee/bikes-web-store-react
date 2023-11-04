@@ -1,7 +1,20 @@
+.form-container {
+  padding: 30px 0;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 10px;
-  padding: 30px 0;
+}
+
+.form-container h2 {
+  padding-bottom: 25px;
+  color: #191919;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
