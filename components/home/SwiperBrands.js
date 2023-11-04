@@ -25,6 +25,8 @@ import mongoose from '@/public/images/brands/mongoose_logo.jpg';
 import norco from '@/public/images/brands/norco_logo.jpg';
 import outleap from '@/public/images/brands/outleap_logo.jpg';
 import wtp from '@/public/images/brands/wtp_logo.jpg';
+import nirve from '@/public/images/brands/nirve_logo.jpg';
+import radio from '@/public/images/brands/radio_logo.jpg';
 
 export default function SwiperBrands() {
   return (
@@ -201,6 +203,40 @@ export default function SwiperBrands() {
                 sizes="100vw"
                 style={{ width: '40%', height: 'auto' }}
                 alt="WTP logo"
+              ></Image>
+            </div>
+          </Link>
+        </SwiperSlide>
+        <SwiperSlide className={css['swiper-slide']}>
+          <Link
+            href={{
+              pathname: '/catalog',
+              query: { brand: 'Nirve' },
+            }}
+          >
+            <div className={css['img-wrapper']}>
+              <Image
+                src={nirve}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="Nirve logo"
+              ></Image>
+            </div>
+          </Link>
+        </SwiperSlide>
+        <SwiperSlide className={css['swiper-slide']}>
+          <Link
+            href={{
+              pathname: '/catalog',
+              query: { brand: 'Radio' },
+            }}
+          >
+            <div className={css['img-wrapper']}>
+              <Image
+                src={radio}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="Radio logo"
               ></Image>
             </div>
           </Link>

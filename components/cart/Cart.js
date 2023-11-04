@@ -83,7 +83,7 @@ export default function Cart() {
           </div>
         </div>
       )) || (
-        <div>
+        <div className={css.emptyCart}>
           <b>Корзина пуста!</b>
         </div>
       )}

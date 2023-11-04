@@ -38,3 +38,7 @@
 .cart-img {
   margin: 0 auto;
 }
+
+.emptyCart {
+  font-size: 24px;
+}
