@@ -8,11 +8,17 @@
   font-size: 20px;
   font-style: normal;
   line-height: normal;
+}
 
+.notFoundPage a {
+  text-decoration: underline;
 }
 
 .notFoundPage h1{
-font-size: 24px;
-font-weight: 700;
-  
+  color: rgb(180, 18, 18);
+  font-weight: 700;
+  font-size: calc(100% + 1vw);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  line-height: normal;
 }

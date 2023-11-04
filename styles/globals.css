@@ -4,6 +4,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -19,7 +20,6 @@ body {
   background: #ffffff;
   overflow-y: scroll;
   text-align: center;
-  scroll-behavior: smooth;
 }
 
 main {
