@@ -1,12 +1,18 @@
 .main-content h2 {
-  padding: 25px 0;
+  padding-bottom: 25px;
   color: #191919;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: calc(1em + 0.5vw);
+  font-size: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
 }
+
+.main-content h2 b{
+  letter-spacing: 1.5px;
+  color: rgb(77, 3, 3);
+}
+
 .reviewsContainer {
   display: flex;
   flex-wrap: wrap;

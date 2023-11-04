@@ -67,8 +67,8 @@ export default function Reviews({ pageSize }) {
   if (data) {
     return (
       <div className={css['main-content']}>
-        <h2>Отзывы о BikesWebStore</h2>
         <div className={css['reviewsContainer']}>
+          <h2>Отзывы о <b>BikesWebStore</b></h2>
           {paginatedData.map((review, index) => (
             <div
               key={index}
