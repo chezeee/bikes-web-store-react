@@ -1,7 +1,17 @@
 import { useState, useContext } from 'react';
 import { Context } from '@/context/orders';
-import { useSession, signIn } from 'next-auth/react';
-import { Button, Input, Spinner } from '@nextui-org/react';
+import { useSession } from 'next-auth/react';
+import {
+  Button,
+  Input,
+  Spinner,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from '@nextui-org/react';
 import { useRouter } from 'next/router';
 import { nanoid } from 'nanoid';
 
@@ -9,6 +19,7 @@ import css from './Order.module.css';
 
 export default function Order({}) {
   const [orders, setOrders] = useContext(Context),
+    { isOpen, onOpen, onOpenChange } = useDisclosure(),
     { data: session, status } = useSession(),
     [name, setName] = useState(session?.user?.name ? session.user.name : ''),
     [email, setEmail] = useState(
@@ -60,10 +71,8 @@ export default function Order({}) {
 
         if (res.ok) {
           // Order successfully submitted
-          alert(`Спасибо за заказ!
-          Ваш заказ поступил в обработку!`);
+          onOpen();
           setOrders([]);
-          router.push('/catalog');
         } else {
           // Handle error response
           alert('Error placing order. Please try again.');
@@ -116,6 +125,36 @@ export default function Order({}) {
           Оформить заказ
         </Button>
       </form>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Спасибо за Вашу покупку!
+              </ModalHeader>
+              <ModalBody>
+                <p>Ваш заказ уже у нас!</p>
+                <p>Мы уже начали его обрабатывать.</p>
+                <p>
+                  Курьер в скором времени свяжется с Вами, чтобы согласовать
+                  доставку.
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button
+                  color="danger"
+                  variant="light"
+                  onPress={() => {
+                    router.push('/catalog');
+                  }}
+                >
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </>
   );
 }
