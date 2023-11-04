@@ -38,7 +38,7 @@ export default function CartItem({
         />
         <Button
           isIconOnly
-          color="warning"
+          // color="warning"
           variant="faded"
           className={css['delete-button']}
           onClick={() => deleteItem(id)}
